@@ -6,9 +6,9 @@ import AppNavigation from "../Navigation/AppNavigation";
 
 const App: ReactNode = () => {
   return (
-      <RootProvider>
-        <AppNavigation />
-      </RootProvider>
+    <RootProvider>
+      <AppNavigation />
+    </RootProvider>
   );
 };
 

@@ -9,10 +9,6 @@ const ContextProviderComposer = ({ contextProviders, children }) => {
 
 export default function Provider(props) {
   return (
-    <ContextProviderComposer
-      contextProviders={[
-      ]}
-      children={props.children}
-    />
+    <ContextProviderComposer contextProviders={[]} children={props.children} />
   );
 }
