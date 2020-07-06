@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
   newsStyle: {
     flex: 1
   },
+  headerStyle: {
+    marginLeft: 16,
+    fontSize: 26,
+    color: Colors.blueGrey,
+    marginTop: -70
+  },
   itemStyle: {
     marginLeft: 18,
     marginRight: 18,

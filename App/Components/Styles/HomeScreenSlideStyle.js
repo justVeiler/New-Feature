@@ -1,20 +1,20 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    bottom: 50,
-    marginLeft: 16,
-    marginRight: 16,
-    borderRadius: 12
-  },
   slideContainer: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    borderRadius: 12
+  },
+  container : {
+    flex: 1,
+    bottom: 80,
+    marginLeft: 16,
+    marginRight: 16
   },
   slide: {
+    borderRadius: 12,
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
