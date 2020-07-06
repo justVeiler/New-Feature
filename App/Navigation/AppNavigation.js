@@ -13,10 +13,6 @@ function AppNavigation() {
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator headerMode="none">
         <Stack.Screen name={"HomeScreen"} component={HomeScreen} />
-        {/*<Stack.Screen*/}
-        {/*  name={"HomeScreenDetailPage3"}*/}
-        {/*  component={HomeScreenDetailPage1}*/}
-        />
       </Stack.Navigator>
     </NavigationContainer>
   );
