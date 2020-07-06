@@ -5,11 +5,8 @@ import styles from "./Styles/HomeScreenHeaderStyle";
 
 export default function HomeScreen() {
   return (
-    <ImageBackground
-      source={images.background}
-      style={styles.backgroundImage}>
-        <StatusBar barStyle={"light-content"} translucent={true}/>
+    <ImageBackground source={images.background} style={styles.backgroundImage}>
+      <StatusBar barStyle={"light-content"} translucent={true} />
     </ImageBackground>
-
   );
 }
