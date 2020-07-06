@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     marginRight: 16
   },
-  swipeContainer: { borderRadius: 12, height: 140 },
+  swipeContainer: { borderRadius: 12, height: 140 / 736 * Dimensions.get("screen").height },
   slide: {
     borderRadius: 12,
     flex: 1,
