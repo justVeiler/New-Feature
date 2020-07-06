@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./Styles/HomeScreenNewsStyle";
 import newsData from "./HomeScreenNewsData";
-import Colors from "../Themes/Colors";
 
 function renderItem({ item }) {
   return (

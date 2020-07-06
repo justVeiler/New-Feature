@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import Swiper from "react-native-web-swiper";
 import styles from "./Styles/HomeScreenSlideStyle";
 import images from "../Images/images";
