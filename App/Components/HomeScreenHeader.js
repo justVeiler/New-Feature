@@ -14,11 +14,7 @@ export default function HomeScreenHeader() {
                   translucent={true}
                   backgroundColor={"transparent"}
               />
-
           </SafeAreaView>
-        <TouchableOpacity title={'camera'} style={{bottom: 60}}>
-          <Text>Camera</Text>
-        </TouchableOpacity>
       </ImageBackground>
   );
 }
