@@ -34,7 +34,7 @@ export default function Bottom() {
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",
-          tabBarIcon: ({}) => <Image source={images.iconHome} />
+
         }}
       />
       <Tab.Screen
@@ -42,7 +42,6 @@ export default function Bottom() {
         component={Voucher}
         options={{
           tabBarLabel: "Voucher",
-          tabBarIcon: ({}) => <Image source={images.iconVoucher} />
         }}
       />
       <Tab.Screen
@@ -50,15 +49,6 @@ export default function Bottom() {
         component={Wallet}
         options={{
           tabBarLabel: "Wallet",
-          tabBarIcon: ({}) => <Image source={images.iconWallet} />
-        }}
-      />
-      <Tab.Screen
-        name={"Account"}
-        component={Account}
-        options={{
-          tabBarLabel: "Account",
-          tabBarIcon: ({}) => <Image source={images.iconUser} />
         }}
       />
     </Tab.Navigator>
