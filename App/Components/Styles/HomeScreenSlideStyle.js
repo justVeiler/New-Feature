@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   slideContainer: {
@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 12
   },
-  container : {
+  container: {
     flex: 1,
-    bottom: 80,
+    marginTop: -50,
     marginLeft: 16,
     marginRight: 16
   },
+  swipeContainer: { borderRadius: 12, height: 140 },
   slide: {
     borderRadius: 12,
     flex: 1,

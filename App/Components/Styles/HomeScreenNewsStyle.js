@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     fontSize: 26,
     color: Colors.blueGrey,
-    marginTop: -70
+    marginTop: -150
   },
   itemStyle: {
     marginLeft: 18,

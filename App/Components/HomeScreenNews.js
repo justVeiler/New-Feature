@@ -16,11 +16,13 @@ function renderItem({ item }) {
 
 export default function HomeScreenNews() {
   return (
-    <View style={{ flex: 1}}>
-      <Text style={styles.headerStyle}>
-        News
-      </Text>
-      <FlatList data={newsData} renderItem={renderItem} style={{marginTop : 5}}/>
+    <View style={{ flex: 1 }}>
+      <Text style={styles.headerStyle}>News</Text>
+      <FlatList
+        data={newsData}
+        renderItem={renderItem}
+        style={{ marginTop: 5 }}
+      />
     </View>
   );
 }
