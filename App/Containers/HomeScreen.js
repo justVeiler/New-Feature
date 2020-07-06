@@ -7,8 +7,8 @@ import BottomNavigator from "../Navigation/BottomNavigation";
 
 export default function HomeScreen() {
   return (
-    <View style={{flex: 1}}>
-      <HomeScreenHeader />
+    <View style={{ flex: 1 }}>
+      <HomeScreenHeader/>
       <HomeScreenSlide />
       <HomeScreenNews />
     </View>
