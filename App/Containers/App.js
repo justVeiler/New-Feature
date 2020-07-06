@@ -1,9 +1,15 @@
 import React from "react";
-import {View, Text} from "react-native";
+import { ReactNode } from "react";
 
-export default function App() {
+import RootProvider from "./RootContainer";
+import AppNavigation from "../Navigation/AppNavigation";
+
+const App: ReactNode = () => {
   return (
-    <View>
-    </View>
-  )
-}
+      <RootProvider>
+        <AppNavigation />
+      </RootProvider>
+  );
+};
+
+export default App;
