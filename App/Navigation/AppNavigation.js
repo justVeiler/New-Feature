@@ -4,8 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import BottomNavigation from "../Navigation/BottomNavigation";
 import { navigationRef } from "../Navigation/RootNavigation";
-import HomeScreen from "../Components/HomeScreenHeader";
-
+import HomeScreen from "../Containers/HomeScreen";
 const Stack = createStackNavigator();
 
 function AppNavigation() {
