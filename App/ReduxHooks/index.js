@@ -1,0 +1,3 @@
+const actions = dispatch => {
+  return {};
+};
