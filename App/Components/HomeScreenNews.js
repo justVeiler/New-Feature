@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./Styles/HomeScreenNewsStyle";
 import newsData from "./HomeScreenNewsData";
-import Colors from  "../Themes/Colors"
 
 function renderItem({ item }) {
   return (
@@ -16,11 +15,13 @@ function renderItem({ item }) {
 
 export default function HomeScreenNews() {
   return (
-    <View style={{flex: 1}}>
-      <Text style={{marginLeft: 16,
-      fontSize : 26,
-      color: Colors.blueGrey}}>News</Text>
-      <FlatList data={newsData} renderItem={renderItem} />
+    <View style={{ flex: 1 }}>
+      <Text style={styles.headerStyle}>News</Text>
+      <FlatList
+        data={newsData}
+        renderItem={renderItem}
+        style={{ marginTop: 5 }}
+      />
     </View>
   );
 }
