@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: "italic",
     color: Colors.velvet,
-    padding:3
+    padding: 3
   },
   contentText: {
     fontSize: 16,
     marginBottom: 10,
-    padding : 3
+    padding: 3
   }
 });
 export default styles;

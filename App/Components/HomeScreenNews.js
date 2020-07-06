@@ -16,7 +16,7 @@ function renderItem({ item }) {
 
 export default function HomeScreenNews() {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Text style={{ marginLeft: 16, fontSize: 26, color: Colors.blueGrey }}>
         News
       </Text>

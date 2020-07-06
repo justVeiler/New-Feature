@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import RootProvider from "./RootContainer";
 import AppNavigation from "../Navigation/AppNavigation";
 
-const App: ReactNode = () => {
+const App = () => {
   return (
     <RootProvider>
       <AppNavigation />

@@ -1,10 +1,23 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import Swiper from "react-native-web-swiper";
+import styles from "./Styles/HomeScreenSlideStyle";
+import images from "../Images/images";
 
 export default function HomeScreenSlide() {
   return (
-    <View>
-      <Text>BBBBBB</Text>
+    <View style={styles.container}>
+      <Swiper>
+        <View style={styles.slide}>
+          <Image source={images.slide1} />
+        </View>
+        <View style={styles.slide}>
+          <Image source={images.slide2} />
+        </View>
+        <View style={styles.slide}>
+          <Text>Slide 3</Text>
+        </View>
+      </Swiper>
     </View>
   );
 }
