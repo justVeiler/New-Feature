@@ -7,24 +7,25 @@ const styles = StyleSheet.create({
   },
   itemStyle: {
     marginLeft: 18,
-    marginRight: 18
+    marginRight: 18,
+    marginBottom: 6
   },
   headerText: {
     lineHeight: 26,
     fontSize: 22,
-    padding: 5
+    padding: 3
   },
   descText: {
     lineHeight: 18,
     fontSize: 18,
     fontStyle: "italic",
     color: Colors.velvet,
-    padding: 5
+    padding:3
   },
   contentText: {
     fontSize: 16,
-    padding: 5,
-    marginBottom: 10
+    marginBottom: 10,
+    padding : 3
   }
 });
 export default styles;
