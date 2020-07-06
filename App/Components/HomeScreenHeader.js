@@ -1,5 +1,5 @@
 import React from "react";
-import {ImageBackground, StatusBar, SafeAreaView,} from "react-native";
+import {ImageBackground, StatusBar, SafeAreaView, TouchableOpacity, Text} from "react-native";
 import images from "../Images/images";
 import styles from "./Styles/HomeScreenHeaderStyle";
 
@@ -14,7 +14,11 @@ export default function HomeScreenHeader() {
                   translucent={true}
                   backgroundColor={"transparent"}
               />
+
           </SafeAreaView>
+        <TouchableOpacity title={'camera'} style={{bottom: 60}}>
+          <Text>Camera</Text>
+        </TouchableOpacity>
       </ImageBackground>
   );
 }

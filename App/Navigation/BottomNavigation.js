@@ -1,4 +1,5 @@
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../Containers/HomeScreen";
 import { Image, Text, View, StyleSheet } from "react-native";
@@ -26,32 +27,34 @@ function Account() {
     </View>
   );
 }
-export default function Bottom() {
+export default function BottomNavigation() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name={"Home"}
-        component={HomeScreen}
-        options={{
-          tabBarLabel: "Home",
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen
+          name={"Home"}
+          component={HomeScreen}
+          options={{
+            tabBarLabel: "Home",
 
-        }}
-      />
-      <Tab.Screen
-        name={"Voucher"}
-        component={Voucher}
-        options={{
-          tabBarLabel: "Voucher",
-        }}
-      />
-      <Tab.Screen
-        name={"Wallet"}
-        component={Wallet}
-        options={{
-          tabBarLabel: "Wallet",
-        }}
-      />
-    </Tab.Navigator>
+          }}
+        />
+        <Tab.Screen
+          name={"Voucher"}
+          component={Voucher}
+          options={{
+            tabBarLabel: "Voucher",
+          }}
+        />
+        <Tab.Screen
+          name={"Wallet"}
+          component={Wallet}
+          options={{
+            tabBarLabel: "Wallet",
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
