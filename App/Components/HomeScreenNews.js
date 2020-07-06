@@ -1,35 +1,28 @@
 import React from "react";
-import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import styles from "./Styles/HomeScreenNewsStyle";
+import newsData from "./HomeScreenNewsData"
 
-const newsData = [
-    {
-        key: "news1",
-        header : "Wololo",
-        desc : "Ahiho",
-        content : "This is News"
-    },
-    {
-        key: "news2",
-        header : "Wololo",
-        desc : "Ahiho",
-        content : "This is News"
-    },
-    {
-        key: "news3",
-        header : "Wololo",
-        desc : "Ahiho",
-        content : "This is News"
-    },{
-        key: "news4",
-        header : "Wololo",
-        desc : "Ahiho",
-        content : "This is News"
-    }
-]
 
-function renderItem() {
-    return (
-        <TouchableOpacity/>
-    )
+function renderItem({ item }) {
+  return (
+    <TouchableOpacity
+      style={{
+        marginLeft: 16,
+        marginRight: 16
+      }}>
+      <Text style={styles.headerText}>{item.header}</Text>
+      <Text style={styles.descText}>{item.desc}</Text>
+      <Text style={styles.contentText}>{item.content}</Text>
+    </TouchableOpacity>
+  );
+}
 
+export default function HomeScreenNews() {
+  return (
+    <View>
+      <Text>News</Text>
+      <FlatList data={newsData} renderItem={renderItem} />
+    </View>
+  );
 }
