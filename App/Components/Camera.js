@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { RNCamera } from "react-native-camera";
 
-export default class ExampleApp extends PureComponent {
+export default class Camera extends PureComponent {
   render() {
     return (
         <View style={styles.container}>
