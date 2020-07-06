@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   headerText: {
     lineHeight: 26,
     fontSize: 22,
-    padding: 5,
+    padding: 5
   },
   descText: {
     lineHeight: 18,
@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   },
   contentText: {
     fontSize: 16,
-    padding: 5
+    padding: 5,
+    marginBottom: 10
   }
 });
 export default styles;
