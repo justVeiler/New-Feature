@@ -22,7 +22,7 @@ export default function HomeScreenHeader() {
       </SafeAreaView>
       <TouchableOpacity
         style={{ bottom: 70, backgroundColor: "blue" }}
-        onPress={new Camera()}>
+        onPress={() => Camera}>
         <Text> camera</Text>
       </TouchableOpacity>
     </ImageBackground>
