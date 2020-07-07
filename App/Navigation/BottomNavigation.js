@@ -5,6 +5,7 @@ import HomeScreen from "../Containers/HomeScreen";
 import AddButtonCamera from '../Components/AddButtonCamera';
 import { Image, Text, View, StyleSheet } from "react-native";
 import images from "../Images/images";
+import AccountScreen from '../Containers/AccountScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,7 @@ export default function BottomNavigator() {
 
         <Tab.Screen
           name={"Account"}
-          component={Account}
+          component={AccountScreen}
           options={{
             tabBarLabel: "Account",
             tabBarIcon: ({}) => <Image source={images.iconAccount} />
