@@ -1,58 +1,59 @@
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../Containers/HomeScreen";
-import AddButtonCamera from '../Components/AddButtonCamera';
-import { Image, Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import images from "../Images/images";
-import AccountScreen from '../Containers/AccountScreen';
 
-export const Tab = createBottomTabNavigator();
-
-function Account() {
+const Tab = createBottomTabNavigator();
+function Voucher() {
+  return (
+    <View style={styles.itemContent}>
+      <Text>Voucher</Text>
+    </View>
+  );
+}
+function Wallet() {
   return (
     <View style={styles.itemContent}>
       <Text>Wallet</Text>
     </View>
   );
 }
-
-
-export default function BottomNavigator() {
+function Account() {
   return (
+    <View style={styles.itemContent}>
+      <Text>Account</Text>
+    </View>
+  );
+}
+export default function BottomNavigation() {
+  return (
+    <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
           name={"Home"}
           component={HomeScreen}
           options={{
             tabBarLabel: "Home",
-            tabBarIcon: ({}) => <Image source={images.iconHome} />
           }}
         />
         <Tab.Screen
-          name={"Camera"}
-          component={AddButtonCamera}
+          name={"Plus"}
+          component={Voucher}
           options={{
-            unmountOnBlur: false,
-            tabBarLabel: "",
-            tabBarIcon: ({}) => <AddButtonCamera />
-          }}
-          listeners={{
-            tabPress: (e) => {
-              e.preventDefault(); // — > the main part
-            },
+            tabBarLabel: "Plus",
           }}
         />
-
         <Tab.Screen
-          name={"Account"}
-          component={AccountScreen}
+          name={"Wallet"}
+          component={Wallet}
           options={{
-            tabBarLabel: "Account",
-            tabBarIcon: ({}) => <Image source={images.iconAccount} />
+            tabBarLabel: "User",
           }}
         />
       </Tab.Navigator>
-
+    </NavigationContainer>
   );
 }
 
