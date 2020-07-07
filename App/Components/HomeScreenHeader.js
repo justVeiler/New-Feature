@@ -16,11 +16,11 @@ export default function HomeScreenHeader() {
           backgroundColor={"transparent"}
         />
       </SafeAreaView>
-      <TouchableOpacity
-        style={{ bottom: 70, backgroundColor: "blue" }}
-        onPress={takePicture}>
-        <Text>camera</Text>
-      </TouchableOpacity>
+      {/*<TouchableOpacity*/}
+      {/*  style={{ bottom: 70, backgroundColor: "blue" }}*/}
+      {/*  onPress={takePicture}>*/}
+      {/*  <Text>camera</Text>*/}
+      {/*</TouchableOpacity>*/}
     </ImageBackground>
   );
 }
