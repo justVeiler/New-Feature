@@ -1,13 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "../Containers/HomeScreen";
 import AddButtonCamera from '../Components/AddButtonCamera';
 import { Image, Text, View, StyleSheet } from "react-native";
 import images from "../Images/images";
 import AccountScreen from '../Containers/AccountScreen';
 
-const Tab = createBottomTabNavigator();
+export const Tab = createBottomTabNavigator();
 
 function Account() {
   return (
@@ -30,12 +29,17 @@ export default function BottomNavigator() {
           }}
         />
         <Tab.Screen
-          Screen={null}
           name={"Camera"}
           component={AddButtonCamera}
           options={{
+            unmountOnBlur: false,
             tabBarLabel: "",
             tabBarIcon: ({}) => <AddButtonCamera />
+          }}
+          listeners={{
+            tabPress: (e) => {
+              e.preventDefault(); // — > the main part
+            },
           }}
         />
 
