@@ -27,9 +27,35 @@ export default function AddButtonCamera(){
     inputRange: [0,1],
     outputRange: ['0deg', '90deg']
   })
+  const thermometerX = mode.interpolate({
+    inputRange: [0, 1],
+    outputRange: [5, -50]
+  });
+  const thermometerY = mode.interpolate({
+    inputRange: [0, 1],
+    outputRange: [5, -40]
+  });
+  const timeX = mode.interpolate({
+    inputRange: [0, 1],
+    outputRange: [10, 65]
+  });
+  const timeY = mode.interpolate({
+    inputRange: [0, 1],
+    outputRange: [2, -40]
+  });
 
   return (
     <View style={styles.container}>
+      <Animated.View style={{position: 'absolute', left: thermometerX, top: thermometerY}}>
+        <View style={styles.secondaryButton}>
+          <Image source={images.plus} />
+        </View>
+      </Animated.View>
+      <Animated.View style={{position: 'absolute', left: timeX, top: timeY}}>
+        <View style={styles.secondaryButton}>
+          <Image source={images.plus} />
+        </View>
+      </Animated.View>
       <Animated.View style={[styles.button, sizeStyle]}>
         <TouchableHighlight underlayColor={'#7f58ff'} onPress={handlePress}>
           <Animated.View style={{transform: [{rotate: rotation}]}}>
