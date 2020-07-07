@@ -9,6 +9,7 @@ import {
 import images from "../Images/images";
 import styles from "./Styles/HomeScreenHeaderStyle";
 import Camera from "./Camera";
+import {navigate} from '../Navigation/RootNavigation';
 
 export default function HomeScreenHeader() {
   return (
@@ -22,7 +23,7 @@ export default function HomeScreenHeader() {
       </SafeAreaView>
       <TouchableOpacity
         style={{ bottom: 70, backgroundColor: "blue" }}
-        onPress={() => Camera}>
+        onPress={() => navigate("Camera")}>
         <Text>camera</Text>
       </TouchableOpacity>
     </ImageBackground>
