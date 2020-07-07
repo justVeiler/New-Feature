@@ -15,8 +15,8 @@ function renderItem({ item }) {
 
 export default function AccountScreenInfoList() {
   return (
-    <View style={{ flex: 1 }}>
-      <Text style={styles.headerStyle}>News</Text>
+    <View style={{marginTop : 160}}>
+      <Text style={styles.headerStyle}>Info</Text>
       <FlatList
         data={accountData}
         renderItem={renderItem}
