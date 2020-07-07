@@ -2,6 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "../Containers/HomeScreen";
+import AddButtonCamera from '../Components/AddButtonCamera';
 import { Image, Text, View, StyleSheet } from "react-native";
 import images from "../Images/images";
 
@@ -15,13 +16,6 @@ function Account() {
   );
 }
 
-function AddCamera() {
-  return (
-    <View style={styles.itemContent}>
-      <Text>Wallet</Text>
-    </View>
-  );
-}
 
 export default function BottomNavigator() {
   return (
@@ -36,13 +30,15 @@ export default function BottomNavigator() {
           }}
         />
         <Tab.Screen
+          Screen={null}
           name={"Camera"}
-          component={AddCamera}
+          component={AddButtonCamera}
           options={{
-            tabBarLabel: "Camera",
-            tabBarIcon: ({}) => <Image source={images.iconAccount} />
+            tabBarLabel: "",
+            tabBarIcon: ({}) => <AddButtonCamera />
           }}
         />
+
         <Tab.Screen
           name={"Account"}
           component={Account}
@@ -53,6 +49,7 @@ export default function BottomNavigator() {
         />
       </Tab.Navigator>
     </NavigationContainer>
+
   );
 }
 
