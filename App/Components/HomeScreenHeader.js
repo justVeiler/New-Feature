@@ -23,7 +23,7 @@ export default function HomeScreenHeader() {
       <TouchableOpacity
         style={{ bottom: 70, backgroundColor: "blue" }}
         onPress={() => Camera}>
-        <Text> camera</Text>
+        <Text>camera</Text>
       </TouchableOpacity>
     </ImageBackground>
   );

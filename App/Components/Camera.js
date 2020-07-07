@@ -3,19 +3,18 @@ import { AppRegistry, Text, TouchableOpacity, View } from "react-native";
 import { RNCamera } from "react-native-camera";
 import styles from "./Styles/CameraStyle";
 
-const PendingView = () => (
-  <View
-    style={{
-      flex: 1,
-      backgroundColor: "lightgreen",
-      justifyContent: "center",
-      alignItems: "center"
-    }}>
-    <Text>Waiting</Text>
-  </View>
-);
-
 export default function Camera() {
+  const PendingView = () => (
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "lightgreen",
+        justifyContent: "center",
+        alignItems: "center"
+      }}>
+      <Text>Waiting</Text>
+    </View>
+  );
   const takePicture = async function(camera) {
     const options = { quality: 0.5, base64: true };
     const data = await camera.takePictureAsync(options);
