@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         height: 120,
         borderRadius: 60,
         marginLeft: 16,
-        marginTop: 12
+        marginTop: (10/ 736) * Dimensions.get('screen').height
     }
 });
 export default styles;
