@@ -20,6 +20,6 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     elevation: 5
   }
-})
+});
 
 export default styles;

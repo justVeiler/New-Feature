@@ -29,7 +29,6 @@ function Account() {
 }
 export default function BottomNavigation() {
   return (
-    <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
           name={"Home"}
@@ -53,7 +52,6 @@ export default function BottomNavigation() {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
 
