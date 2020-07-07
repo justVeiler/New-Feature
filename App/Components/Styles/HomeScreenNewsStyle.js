@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     fontSize: 26,
     color: Colors.blueGrey,
-    marginTop: (-150 / 736) * Dimensions.get("screen").height
+    marginTop: (-130 / 736) * Dimensions.get("screen").height
   },
   itemStyle: {
     marginLeft: 18,
