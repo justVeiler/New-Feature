@@ -16,7 +16,7 @@ const newsData = [
 
   {
     key: "news3",
-    header: "Hà Nội xuất hiện 3 ổ dịch sốt xuất huyết",
+    header: "Hà Nội xuất hiện 3 ổ dịch sốt xuất huyết\n",
     desc: "VnExpress",
     content:
       "Ba xã gồm Tam Hiệp (huyện Phúc Thọ), Khánh Hà (huyện Thường Tín), Thanh Thùy (huyện Thanh Oai) có nhiều người mắc sốt xuất huyết, diễn biến phức tạp.\n" +
