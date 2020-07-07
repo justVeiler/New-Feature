@@ -30,6 +30,8 @@ export default function takePicture() {
       }
     });
   };
+  console.log("DATA",filePath.data)
+  console.log("URI",filePath.uri)
   return (
     <View style={styles.container}>
       <View style={styles.container}>
@@ -43,7 +45,7 @@ export default function takePicture() {
           style={{ width: 100, height: 100 }}
         />
         <Image
-          source={{ uri: this.state.filePath.uri }}
+          source={{ uri: filePath.uri }}
           style={{ width: 250, height: 250 }}
         />
         <Text style={{ alignItems: "center" }}>{filePath.uri}</Text>
