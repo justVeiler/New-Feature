@@ -47,9 +47,11 @@ export default function AddButtonCamera(){
   return (
     <View style={styles.container}>
       <Animated.View style={{position: 'absolute', left: thermometerX, top: thermometerY}}>
+        <TouchableOpacity>
         <View style={styles.secondaryButton}>
           <Image source={images.plus} />
         </View>
+        </TouchableOpacity>
       </Animated.View>
       <Animated.View style={{position: 'absolute', left: timeX, top: timeY}}>
         <View style={styles.secondaryButton}>
