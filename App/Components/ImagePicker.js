@@ -49,7 +49,7 @@ export default function takePicture() {
           style={{ width: 250, height: 250 }}
         />
         <Text style={{ alignItems: "center" }}>{filePath.uri}</Text>
-        <Button title="Choose File" onPress={chooseFile} />
+        <Button title="Choose File" onPress={() => chooseFile} />
       </View>
     </View>
   );
