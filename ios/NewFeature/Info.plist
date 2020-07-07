@@ -39,6 +39,10 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
     <string>Your own description of the purpose</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Your message to user when the microsphone is accessed for the first time</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Your message to user when the photo library is accessed for the first time</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
