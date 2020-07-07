@@ -1,17 +1,20 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { AppRegistry, Text, TouchableOpacity, View } from "react-native";
 import { RNCamera } from "react-native-camera";
 import styles from "./Styles/CameraStyle";
 
 export default function Camera() {
   AppRegistry.registerComponent("App", () => Camera);
+  console.log("STATUS", RNCamera.Constants.CameraStatus);
+  console.ignoredYellowBox = true;
 
-  const takePicture = camera => {
+  const takePicture = () => {
     try {
       (async function() {
-        const options = { quality: 0.5, base64: true };
-        const data = await camera.takePictureAsync(options).then(data => {
+        const options = { quality: 0.5, base64: true, fixOrientation: true };
+        await this.takePictureAsync(options).then(data => {
           console.log("PIC", data);
+          console.log("STATUS", RNCamera.Constants.CameraStatus);
         });
       })();
     } catch (e) {}

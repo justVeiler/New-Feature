@@ -12,7 +12,9 @@ import Camera from "./Camera";
 import {navigate} from '../Navigation/RootNavigation';
 
 export default function HomeScreenHeader() {
-  return (
+    console.ignoredYellowBox = true;
+
+    return (
     <ImageBackground source={images.background} style={styles.backgroundImage}>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar
