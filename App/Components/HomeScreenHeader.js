@@ -3,8 +3,6 @@ import {
   ImageBackground,
   StatusBar,
   SafeAreaView,
-  TouchableOpacity,
-  Text
 } from "react-native";
 import images from "../Images/images";
 import styles from "./Styles/HomeScreenHeaderStyle";

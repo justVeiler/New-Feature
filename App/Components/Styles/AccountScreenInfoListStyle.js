@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     fontSize: 26,
     color: Colors.blueGrey,
-    marginTop: (-130 / 736) * Dimensions.get("screen").height
+    marginTop: (-130 / 736) * Dimensions.get("screen").height,
+    paddingBottom : 5
   },
   itemStyle: {
     marginLeft: 18,
@@ -18,6 +19,7 @@ const styles = StyleSheet.create({
   headerText: {
     lineHeight: 26,
     fontSize: 22,
+    padding : 5
   },
   descText: {
     lineHeight: 18,
