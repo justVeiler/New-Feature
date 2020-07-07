@@ -1,33 +1,29 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "../Containers/HomeScreen";
 import { Image, Text, View, StyleSheet } from "react-native";
 import images from "../Images/images";
 
 const Tab = createBottomTabNavigator();
-function Voucher() {
-  return (
-    <View style={styles.itemContent}>
-      <Text>Voucher</Text>
-    </View>
-  );
-}
-function Wallet() {
+
+function Account() {
   return (
     <View style={styles.itemContent}>
       <Text>Wallet</Text>
     </View>
   );
 }
-function Account() {
+
+function AddCamera() {
   return (
     <View style={styles.itemContent}>
-      <Text>Account</Text>
+      <Text>Wallet</Text>
     </View>
   );
 }
-export default function BottomNavigation() {
+
+export default function BottomNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
@@ -36,21 +32,23 @@ export default function BottomNavigation() {
           component={HomeScreen}
           options={{
             tabBarLabel: "Home",
-
+            tabBarIcon: ({}) => <Image source={images.iconHome} />
           }}
         />
         <Tab.Screen
-          name={"Voucher"}
-          component={Voucher}
+          name={"Camera"}
+          component={AddCamera}
           options={{
-            tabBarLabel: "Voucher",
+            tabBarLabel: "Camera",
+            tabBarIcon: ({}) => <Image source={images.iconAccount} />
           }}
         />
         <Tab.Screen
-          name={"Wallet"}
-          component={Wallet}
+          name={"Account"}
+          component={Account}
           options={{
-            tabBarLabel: "Wallet",
+            tabBarLabel: "Account",
+            tabBarIcon: ({}) => <Image source={images.iconAccount} />
           }}
         />
       </Tab.Navigator>
