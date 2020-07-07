@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, Image } from "react-native";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
 import ImagePicker from "react-native-image-picker";
 
 export default function takePicture() {
@@ -26,8 +26,7 @@ export default function takePicture() {
         console.log("User tapped custom button: ", response.customButton);
         alert(response.customButton);
       } else {
-        const source = response;
-        setFilePath(filePath === source);
+        setFilePath(filePath === response);
       }
     });
   };
@@ -39,7 +38,7 @@ export default function takePicture() {
           style={{width: 100, height: 100}} />*/}
         <Image
           source={{
-            uri: "data:image/jpeg;base64," + this.state.filePath.data
+            uri: "data:image/jpeg;base64," + filePath.data
           }}
           style={{ width: 100, height: 100 }}
         />
@@ -47,8 +46,8 @@ export default function takePicture() {
           source={{ uri: this.state.filePath.uri }}
           style={{ width: 250, height: 250 }}
         />
-        <Text style={{ alignItems: "center" }}>{this.state.filePath.uri}</Text>
-        <Button title="Choose File" onPress={() => chooseFile()} />
+        <Text style={{ alignItems: "center" }}>{filePath.uri}</Text>
+        <Button title="Choose File" onPress={chooseFile} />
       </View>
     </View>
   );

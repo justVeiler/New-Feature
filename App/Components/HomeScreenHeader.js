@@ -1,17 +1,13 @@
 import React from "react";
-import {
-  ImageBackground,
-  StatusBar,
-  SafeAreaView,
-} from "react-native";
+import { ImageBackground, StatusBar, SafeAreaView,TouchableOpacity, Text } from "react-native";
 import images from "../Images/images";
 import styles from "./Styles/HomeScreenHeaderStyle";
 import Camera from "./Camera";
-import {navigate} from '../Navigation/RootNavigation';
+import { navigate } from "../Navigation/RootNavigation";
+import takePicture from "./ImagePicker";
 
 export default function HomeScreenHeader() {
-
-    return (
+  return (
     <ImageBackground source={images.background} style={styles.backgroundImage}>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar
@@ -20,11 +16,11 @@ export default function HomeScreenHeader() {
           backgroundColor={"transparent"}
         />
       </SafeAreaView>
-      {/*<TouchableOpacity*/}
-      {/*  style={{ bottom: 70, backgroundColor: "blue" }}*/}
-      {/*  onPress={() => navigate("Camera")}>*/}
-      {/*  <Text>camera</Text>*/}
-      {/*</TouchableOpacity>*/}
+      <TouchableOpacity
+        style={{ bottom: 70, backgroundColor: "blue" }}
+        onPress={takePicture}>
+        <Text>camera</Text>
+      </TouchableOpacity>
     </ImageBackground>
   );
 }
