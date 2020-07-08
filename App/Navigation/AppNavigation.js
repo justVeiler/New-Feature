@@ -6,7 +6,7 @@ import BottomNavigation from "../Navigation/BottomNavigation";
 import { navigationRef } from "../Navigation/RootNavigation";
 import HomeScreen from "../Containers/HomeScreen";
 import Camera from '../Components/ImagePicker';
-// import ImagePicker from '../Components/ImagePicker';
+import ImagePicking from '../Containers/ImagePicking';
 const Stack = createStackNavigator();
 
 function AppNavigation() {
@@ -15,8 +15,7 @@ function AppNavigation() {
       <Stack.Navigator headerMode="none">
         <Stack.Screen name={"HomeScreen"} component={BottomNavigation} />
         <Stack.Screen name={"Camera"} component={Camera} />
-
-        {/*<Stack.Screen name={"Camera"} component={Camera} />*/}
+        {/*<Stack.Screen name={"ImagePicking"} component={ImagePicking}/>*/}
       </Stack.Navigator>
     </NavigationContainer>
   );
