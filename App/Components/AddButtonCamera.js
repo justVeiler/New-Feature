@@ -1,38 +1,53 @@
-import React, {Component} from 'react';
-import {View, TouchableHighlight, Image, TouchableOpacity, Animated} from 'react-native';
-import {navigate} from '../Navigation/RootNavigation';
-import styles from './Styles/AddButtonCameraStyle';
-import images from '../Images/images';
+import React, { Component, useState } from "react";
+import { View, Image, TouchableOpacity, Animated } from "react-native";
+import { navigate } from "../Navigation/RootNavigation";
+import styles from "./Styles/AddButtonCameraStyle";
+import images from "../Images/images";
+import Camera from "./ImagePicker";
+import ImagePicker from "react-native-image-picker";
 
-export default function AddButtonCamera(){
+export default function AddButtonCamera() {
+  const [filePath, setFilePath] = useState({});
   const buttonSize = new Animated.Value(1);
   const mode = new Animated.Value(0);
   function handlePress() {
-    navigate('Camera')
-    Animated.sequence([
-      Animated.timing(buttonSize,{
-        toValue: 0.95,
-        duration: 0.5
-      }),
-      Animated.timing(buttonSize, {
-        toValue: 1
-      }),
-    ]).start();
+    const options = {
+      title: "Select Image",
+      customButtons: [
+        { name: "customOptionKey", title: "Choose Photo from Custom Option" }
+      ],
+      storageOptions: {
+        skipBackup: true,
+        path: "images"
+      }
+    };
+    ImagePicker.showImagePicker(options, response => {
+      console.log("Response = ", response);
+
+      if (response.didCancel) {
+        console.log("User cancelled image picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+        alert(response.customButton);
+      } else {
+        this.setState({
+          filePath: response
+        });
+      }
+    });
   }
-  const sizeStyle = {
-    transform: [{scale: buttonSize}]
-  }
+
   return (
     <View style={styles.container}>
-
-      <Animated.View style={[styles.button, sizeStyle]}>
-        <TouchableOpacity underlayColor={'#7f58ff'} onPress={handlePress} >
-        {/*<Animated.View style={{transform: [{rotate: rotation}]}}>*/}
-            <Image source={images.plus} />
+      <Animated.View style={[styles.button,]}>
+        <TouchableOpacity underlayColor={"#7f58ff"} onPress={handlePress}>
+          {/*<Animated.View style={{transform: [{rotate: rotation}]}}>*/}
+          <Image source={images.plus} />
           {/*</Animated.View>*/}
         </TouchableOpacity>
       </Animated.View>
     </View>
   );
 }
-
