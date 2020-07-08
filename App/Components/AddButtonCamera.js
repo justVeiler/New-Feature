@@ -5,15 +5,18 @@ import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
 import Camera from "./ImagePicker";
 import ImagePicker from "react-native-image-picker";
+import ImagePicking from '../Containers/ImagePicking';
 
 export default class AddButtonCamera extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: {}
+      filePath: {},
     };
   }
+
   handlePress = () => {
+    // const { navigation } = this.props;
     const options = {
       title: "Select Image",
       customButtons: [
@@ -25,9 +28,9 @@ export default class AddButtonCamera extends Component {
       }
     };
     ImagePicker.showImagePicker(options, response => {
-      console.log("Response = ", response);
+      // console.log("Response = ", response);
       const { uri } = response;
-      console.log("URI", uri);
+      // console.log("URI", uri);
       navigate("ImagePicking", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
@@ -38,7 +41,7 @@ export default class AddButtonCamera extends Component {
         alert(response.customButton);
       } else {
         this.setState({
-          filePath: response
+          filePath: response,
         });
       }
     });
