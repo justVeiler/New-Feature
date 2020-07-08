@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, TouchableOpacity, Animated } from "react-native";
+import {View, Image, TouchableOpacity, Animated, Modal, Text, Alert} from 'react-native';
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
@@ -8,6 +8,7 @@ import ImagePicker from "react-native-image-picker";
 import ImagePicking from '../Containers/ImagePicking';
 
 export default class AddButtonCamera extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +42,7 @@ export default class AddButtonCamera extends Component {
         alert(response.customButton);
       } else {
         this.setState({
-          filePath: response,
+          filePath: {uri: response.uri},
         });
       }
     });

@@ -17,26 +17,24 @@ export default class ImagePicking extends React.Component {
   render() {
     const { route } = this.props;
     const { params } = route;
-    const  uri  = params;
+    // const  uri  = route.params;
     console.log("Route", route);
     console.log("Params", params);
-    console.log("UURRII", uri);
+    // console.log("UURRII", uri);
     console.log('HERE')
     return (
       <View style={styles.container}>
         <View style={styles.container}>
           <Image
-            source={{
-              uri: "data:image/jpeg;base64," + this.state.filePath.data
-            }}
+            source={{uri: params.uri}}
             style={{ width: 100, height: 100 }}
           />
           <Image
-            source={{ uri: this.state.filePath.uri }}
+            source={{ uri: params.uri}}
             style={{ width: 250, height: 250 }}
           />
           <Text style={{ alignItems: "center" }}>
-            {this.uri}
+            {route.params.uri}
           </Text>
         </View>
       </View>
