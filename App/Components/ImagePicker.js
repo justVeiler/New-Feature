@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Image, StyleSheet, Text, View} from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 
-export default class App extends React.Component {
+export default class Camera extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -8,7 +8,7 @@ export default function AddButtonCamera(){
   const buttonSize = new Animated.Value(1);
   const mode = new Animated.Value(0);
   function handlePress() {
-    // navigate()
+    navigate('Camera')
     Animated.sequence([
       Animated.timing(buttonSize,{
         toValue: 0.95,
