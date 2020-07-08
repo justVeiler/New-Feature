@@ -19,6 +19,15 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#fff',
     elevation: 5
+  },
+  secondaryButton: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#7e58ff'
   }
 });
 
