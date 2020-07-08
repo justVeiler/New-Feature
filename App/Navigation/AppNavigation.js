@@ -6,7 +6,7 @@ import BottomNavigation from "../Navigation/BottomNavigation";
 import { navigationRef } from "../Navigation/RootNavigation";
 import HomeScreen from "../Containers/HomeScreen";
 import Camera from '../Components/ImagePicker';
-import ImagePicker from '../Components/ImagePicker';
+// import ImagePicker from '../Components/ImagePicker';
 const Stack = createStackNavigator();
 
 function AppNavigation() {
