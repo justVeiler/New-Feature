@@ -5,7 +5,7 @@ import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
 import Camera from "./ImagePicker";
 import ImagePicker from "react-native-image-picker";
-import ImagePicking from '../Containers/ImagePicking';
+import ImagePickingScreen from '../Containers/ImagePickingScreen';
 
 export default class AddButtonCamera extends Component {
 
@@ -32,7 +32,7 @@ export default class AddButtonCamera extends Component {
       // console.log("Response = ", response);
       const { uri } = response;
       // console.log("URI", uri);
-      navigate("ImagePicking", { uri: uri });
+      navigate("ImagePickingScreen", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
       } else if (response.error) {
