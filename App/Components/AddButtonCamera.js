@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Image, TouchableOpacity, Animated } from "react-native";
+import {View, Image, TouchableOpacity, Animated, Text, Button} from 'react-native';
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
@@ -44,6 +44,22 @@ export default class AddButtonCamera extends Component{
     return (
       <View style={styles.container}>
         <Animated.View style={[styles.button,]}>
+          <View style={styles.container}>
+            <Image
+              source={{
+                uri: 'data:image/jpeg;base64,' + this.state.filePath.data,
+              }}
+              style={{ width: 100, height: 100 }}
+            />
+            <Image
+              source={{ uri: this.state.filePath.uri }}
+              style={{ width: 250, height: 250 }}
+            />
+            <Text style={{ alignItems: 'center' }}>
+              {this.state.filePath.uri}
+            </Text>
+            {/*<Button title="Choose File" onPress={this.chooseFile.bind(this)} />*/}
+          </View>
           <TouchableOpacity underlayColor={"#7f58ff"} onPress={this.handlePress.bind(this)}>
             <Image source={images.plus} />
           </TouchableOpacity>
