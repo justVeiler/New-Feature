@@ -12,8 +12,6 @@ const styles = StyleSheet.create({
     width: 72,
     height: 72,
     borderRadius: 36,
-    position: 'absolute',
-    top: -60,
     shadowColor: '#7f58ff',
     shadowRadius: 5,
     shadowOffset: {height: 10},
@@ -21,6 +19,15 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#fff',
     elevation: 5
+  },
+  secondaryButton: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#7e58ff'
   }
 })
 

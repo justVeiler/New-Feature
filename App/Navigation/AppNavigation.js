@@ -12,7 +12,7 @@ function AppNavigation() {
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator headerMode="none">
-        <Stack.Screen name={"HomeScreen"} component={HomeScreen} />
+        <Stack.Screen name={"HomeScreen"} component={BottomNavigation} />
         <Stack.Screen name={"Camera"} component={Camera} />
       </Stack.Navigator>
     </NavigationContainer>

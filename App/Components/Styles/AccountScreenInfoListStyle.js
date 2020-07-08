@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../../Themes/Colors";
 
 const styles = StyleSheet.create({
-  newsStyle: {
+  accountStyle: {
     flex: 1
   },
   headerStyle: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   headerText: {
     lineHeight: 26,
     fontSize: 22,
-    padding: 5
+    padding : 5
   },
   descText: {
     lineHeight: 18,
