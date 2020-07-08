@@ -9,12 +9,15 @@ export default class ImagePicking extends React.Component {
     this.state = {
       filePath: {}
     };
+
     const { params } = route.route;
-    const {uri} = params;
+    const { uri } = params;
     console.log("Route", route);
     console.log("Params", params);
     console.log("UURRII", uri);
     console.log("HERE");
+    this.setState({ params });
+    console.log("STATE", this.state);
   }
 
   render() {
@@ -23,12 +26,12 @@ export default class ImagePicking extends React.Component {
         <View style={styles.container}>
           <Image
             source={{
-              uri: "data:image/jpeg;base64," + this.state.filePath.data
+              uri: "data:image/jpeg;base64," + this.state.filePath
             }}
             style={{ width: 100, height: 100 }}
           />
           <Image
-            source={{ uri: this.state.filePath.uri }}
+            source={{ uri: this.state.filePath }}
             style={{ width: 250, height: 250 }}
           />
           <Text style={{ alignItems: "center" }}>{this.uri}</Text>
