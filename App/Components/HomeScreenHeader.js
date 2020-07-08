@@ -2,8 +2,6 @@ import React from "react";
 import { ImageBackground, StatusBar, SafeAreaView,TouchableOpacity, Text } from "react-native";
 import images from "../Images/images";
 import styles from "./Styles/HomeScreenHeaderStyle";
-import { navigate } from "../Navigation/RootNavigation";
-import takePicture from "./ImagePicker";
 
 export default function HomeScreenHeader() {
   return (
@@ -15,11 +13,6 @@ export default function HomeScreenHeader() {
           backgroundColor={"transparent"}
         />
       </SafeAreaView>
-      {/*<TouchableOpacity*/}
-      {/*  style={{ bottom: 70, backgroundColor: "blue" }}*/}
-      {/*  onPress={takePicture}>*/}
-      {/*  <Text>camera</Text>*/}
-      {/*</TouchableOpacity>*/}
     </ImageBackground>
   );
 }
