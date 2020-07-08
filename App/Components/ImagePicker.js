@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Image, StyleSheet, Text, View} from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 
-export default class App extends React.Component {
+export default class Camera extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,8 +31,6 @@ export default class App extends React.Component {
         console.log('User tapped custom button: ', response.customButton);
         alert(response.customButton);
       } else {
-        // You can also display the image using data:
-        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
         this.setState({
           filePath: response,
         });
@@ -43,9 +41,6 @@ export default class App extends React.Component {
     return (
         <View style={styles.container}>
           <View style={styles.container}>
-            {/*<Image
-          source={{ uri: this.state.filePath.path}}
-          style={{width: 100, height: 100}} />*/}
             <Image
                 source={{
                   uri: 'data:image/jpeg;base64,' + this.state.filePath.data,
