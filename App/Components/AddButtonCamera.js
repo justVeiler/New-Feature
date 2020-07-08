@@ -6,15 +6,14 @@ import images from "../Images/images";
 import Camera from "./ImagePicker";
 import ImagePicker from "react-native-image-picker";
 
-export default class AddButtonCamera extends Component{
+export default class AddButtonCamera extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: {},
+      filePath: {}
     };
   }
-    handlePress = () => {
-    navigate("ImagePicking")
+  handlePress = () => {
     const options = {
       title: "Select Image",
       customButtons: [
@@ -27,6 +26,9 @@ export default class AddButtonCamera extends Component{
     };
     ImagePicker.showImagePicker(options, response => {
       console.log("Response = ", response);
+      const { uri } = response;
+      console.log("URI", uri);
+      navigate("ImagePicking", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
       } else if (response.error) {
@@ -40,12 +42,14 @@ export default class AddButtonCamera extends Component{
         });
       }
     });
-  }
+  };
   render() {
     return (
       <View style={styles.container}>
-        <Animated.View style={[styles.button,]}>
-          <TouchableOpacity underlayColor={"#7f58ff"} onPress={this.handlePress.bind(this)}>
+        <Animated.View style={[styles.button]}>
+          <TouchableOpacity
+            underlayColor={"#7f58ff"}
+            onPress={this.handlePress.bind(this)}>
             <Image source={images.plus} />
           </TouchableOpacity>
         </Animated.View>

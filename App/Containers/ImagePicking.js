@@ -8,7 +8,14 @@ export default class ImagePicking extends React.Component {
     this.state = {
       filePath: {}
     };
+    const { route } = props;
+    const { params } = route;
+    const { uri } = params;
+    console.log("Route", route);
+    console.log("Params", params);
+    console.log("UURRII", uri);
   }
+
   render() {
     return (
       <View style={styles.container}>
