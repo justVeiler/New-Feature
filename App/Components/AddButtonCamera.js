@@ -8,8 +8,6 @@ import ImagePicker from "react-native-image-picker";
 
 export default function AddButtonCamera() {
   const [filePath, setFilePath] = useState({});
-  const buttonSize = new Animated.Value(1);
-  const mode = new Animated.Value(0);
   function handlePress() {
     const options = {
       title: "Select Image",
@@ -32,7 +30,7 @@ export default function AddButtonCamera() {
         console.log("User tapped custom button: ", response.customButton);
         alert(response.customButton);
       } else {
-        this.setState({
+        setFilePath({
           filePath: response
         });
       }
