@@ -53,7 +53,7 @@ export default class AddButtonCamera extends Component {
         <Animated.View style={[styles.button]}>
           <TouchableOpacity
             underlayColor={"#7f58ff"}
-            onPress={this.handlePress.bind(this)}>
+            onPress={this.handlePress}>
             <Image source={images.plus} />
           </TouchableOpacity>
         </Animated.View>
