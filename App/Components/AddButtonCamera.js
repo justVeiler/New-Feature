@@ -10,7 +10,7 @@ export default function AddButtonCamera(){
     Animated.sequence([
       Animated.timing(buttonSize,{
         toValue: 0.95,
-        duration: 200
+        duration: 0.5
       }),
       Animated.timing(buttonSize, {
         toValue: 1
@@ -25,7 +25,7 @@ export default function AddButtonCamera(){
   }
   const rotation = mode.interpolate({
     inputRange: [0,1],
-    outputRange: ['0deg', '45deg']
+    outputRange: ['0deg', '90deg']
   })
   const thermometerX = mode.interpolate({
     inputRange: [0, 1],
