@@ -9,6 +9,7 @@ import ImagePicker from "react-native-image-picker";
 export default function AddButtonCamera() {
   const [filePath, setFilePath] = useState({});
   function handlePress() {
+    // navigate("ImagePicking")
     const options = {
       title: "Select Image",
       customButtons: [
