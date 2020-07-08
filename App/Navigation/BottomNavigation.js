@@ -8,15 +8,6 @@ import AccountScreen from '../Containers/AccountScreen';
 
 export const Tab = createBottomTabNavigator();
 
-function Account() {
-  return (
-    <View style={styles.itemContent}>
-      <Text>Wallet</Text>
-    </View>
-  );
-}
-
-
 export default function BottomNavigator() {
   return (
       <Tab.Navigator>
@@ -29,10 +20,10 @@ export default function BottomNavigator() {
           }}
         />
         <Tab.Screen
-          name={"Camera"}
-          component={AddButtonCamera}
+          name={"AddButtonCamera"}
+          component={''}
           options={{
-            unmountOnBlur: false,
+            // unmountOnBlur: false,
             tabBarLabel: "",
             tabBarIcon: ({}) => <AddButtonCamera />
           }}
