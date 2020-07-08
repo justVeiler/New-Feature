@@ -17,15 +17,11 @@ export default function AddButtonCamera(){
       Animated.timing(buttonSize, {
         toValue: 1
       }),
-      Animated.timing(mode, {
-        toValue: mode._value === 0 ? 1 : 0
-      })
     ]).start();
   }
   const sizeStyle = {
     transform: [{scale: buttonSize}]
   }
-
   return (
     <View style={styles.container}>
 
