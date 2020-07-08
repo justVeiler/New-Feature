@@ -1,27 +1,23 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import ImagePicker from "react-native-image-picker";
-import {navigate} from '../Navigation/RootNavigation';
-
+import { navigate } from "../Navigation/RootNavigation";
 
 export default class ImagePicking extends React.Component {
-
-  constructor(props) {
-    super(props);
-    // this.handleErr = this.handleErr.bind(this)
+  constructor(route) {
+    super(route);
     this.state = {
-      filePath: {},
+      filePath: {}
     };
-  }
-
-  render() {
-    const { route } = this.props;
-    const { params } = route;
-    const  uri  = params;
+    const { params } = route.route;
+    const {uri} = params;
     console.log("Route", route);
     console.log("Params", params);
     console.log("UURRII", uri);
-    console.log('HERE')
+    console.log("HERE");
+  }
+
+  render() {
     return (
       <View style={styles.container}>
         <View style={styles.container}>
@@ -35,9 +31,7 @@ export default class ImagePicking extends React.Component {
             source={{ uri: this.state.filePath.uri }}
             style={{ width: 250, height: 250 }}
           />
-          <Text style={{ alignItems: "center" }}>
-            {this.uri}
-          </Text>
+          <Text style={{ alignItems: "center" }}>{this.uri}</Text>
         </View>
       </View>
     );
