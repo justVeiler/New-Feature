@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginTop: -50,
+    marginTop: (-55 / 736) * Dimensions.get("screen").height,
     marginLeft: 16,
     marginRight: 16
   },

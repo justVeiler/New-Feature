@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     height: (160 / 736) * Dimensions.get("screen").height
   },
   avatarStyle: {
-    width: (100 / 414) * Dimensions.get("screen").width,
+    width: (120 / 414) * Dimensions.get("screen").width,
     height: (100 / 736) * Dimensions.get("screen").height,
     borderRadius: 60,
     marginLeft: 16,
