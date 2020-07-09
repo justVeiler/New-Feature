@@ -6,11 +6,12 @@ import images from "../Images/images";
 
 export default function HomeScreenSlide() {
   return (
-    <View style={styles.container}>
+    <View style={{borderRadius:12, backgroundColor:"white"}}>
       <Swiper
         loop={true}
         timeout={3}
-        innerContainerStyle={styles.swipeContainer}>
+        innerContainerStyle={styles.swipeContainer}
+        containerStyle={styles.container}>
         <View style={styles.slide}>
           <Image source={images.slide1} resizeMode="contain" />
         </View>

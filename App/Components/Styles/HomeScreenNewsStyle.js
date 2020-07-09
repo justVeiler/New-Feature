@@ -2,14 +2,11 @@ import { StyleSheet, Dimensions } from "react-native";
 import Colors from "../../Themes/Colors";
 
 const styles = StyleSheet.create({
-  newsStyle: {
-    flex: 1
-  },
   headerStyle: {
     marginLeft: 16,
     fontSize: 26,
     color: Colors.blueGrey,
-    marginTop: (-130 / 736) * Dimensions.get("screen").height,
+    marginTop: (5/ 736) * Dimensions.get("screen").height,
     paddingBottom : 5
   },
   itemStyle: {
