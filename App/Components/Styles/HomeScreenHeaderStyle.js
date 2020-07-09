@@ -1,16 +1,16 @@
 import { StyleSheet, Dimensions } from "react-native";
-import Colors from '../../Themes/Colors';
 
 const styles = StyleSheet.create({
   backgroundImage: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     width: "100%",
-    height: (160 / 736) * Dimensions.get("screen").height,
+    height: (160 / 736) * Dimensions.get("screen").height
   },
   text: {
     fontSize: 30,
-    color: Colors.paleGrey,
+    color: "white",
+    marginTop: (15 / 736) * Dimensions.get("screen").height
   }
 });
 export default styles;
