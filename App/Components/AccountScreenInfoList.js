@@ -20,7 +20,7 @@ export default function AccountScreenInfoList() {
       <FlatList
         data={accountData}
         renderItem={renderItem}
-        style={{ marginTop: 5 }}
+        style={{paddingBottom: 5 }}
       />
     </View>
   );
