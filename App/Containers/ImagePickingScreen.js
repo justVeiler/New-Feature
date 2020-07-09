@@ -1,6 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Text, View, Dimensions } from "react-native";
-import ImagePicker from "react-native-image-picker";
+import { Image, Text, View, Dimensions } from "react-native";
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
 
