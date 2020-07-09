@@ -16,7 +16,7 @@ function renderItem({ item }) {
 export default function AccountScreenInfoList() {
   return (
     <View style={{flex: 1}}>
-      <Text style={styles.headerStyle}>Info</Text>
+      <Text style={styles.headerStyle}>History</Text>
       <FlatList
         data={accountData}
         renderItem={renderItem}
