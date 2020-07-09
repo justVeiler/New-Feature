@@ -2,7 +2,6 @@ import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   backgroundImage: {
-    justifyContent: "center",
     alignItems: "center",
     width: "100%",
     height: (160 / 736) * Dimensions.get("screen").height
