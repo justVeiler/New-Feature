@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../Containers/HomeScreen";
 import AddButtonCamera from '../Components/AddButtonCamera';
-import { Image, Text, View, StyleSheet } from "react-native";
+import { Image } from "react-native";
 import images from "../Images/images";
 import AccountScreen from '../Containers/AccountScreen';
 
@@ -29,7 +29,7 @@ export default function BottomNavigator() {
           }}
           listeners={{
             tabPress: (e) => {
-              e.preventDefault(); // — > the main part
+              e.preventDefault();
             },
           }}
         />
@@ -47,15 +47,3 @@ export default function BottomNavigator() {
   );
 }
 
-const styles = StyleSheet.create({
-  buttonStyle: {
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "red"
-  },
-  itemContent: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
