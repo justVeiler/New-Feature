@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, TouchableOpacity, Dimensions } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./Styles/AccountScreenInfoListStyle";
 import accountData from "./AccountScreenData";
 
@@ -15,7 +15,7 @@ function renderItem({ item }) {
 
 export default function AccountScreenInfoList() {
   return (
-    <View style={{marginTop : 150/ 736 * Dimensions.get("screen").height}}>
+    <View style={{flex: 1}}>
       <Text style={styles.headerStyle}>Info</Text>
       <FlatList
         data={accountData}
