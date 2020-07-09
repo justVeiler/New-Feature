@@ -35,6 +35,7 @@ export default class AddButtonCamera extends Component {
       navigate("ImagePickingScreen", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
+
       } else if (response.error) {
         console.log("ImagePicker Error: ", response.error);
       } else if (response.customButton) {
