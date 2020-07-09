@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 30,
     color: "white",
-    marginTop: (40 / 736) * Dimensions.get("screen").height
+    marginTop: (25 / 736) * Dimensions.get("screen").height
   }
 });
 export default styles;
