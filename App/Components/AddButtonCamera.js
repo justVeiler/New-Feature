@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {View, Image, TouchableOpacity, Animated, Modal, Text, Alert} from 'react-native';
+import {View, Image, TouchableOpacity, Animated} from 'react-native';
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
