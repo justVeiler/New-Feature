@@ -12,19 +12,23 @@ import {
 
 export default function AccountScreenHeader() {
   return (
-    <ImageBackground source={images.background} style={styles.backgroundImage}>
-      <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar barStyle={"dark-content"} translucent={true} />
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <Image
-            source={images.avatar}
-            resizeMode={"cover"}
-            resizeMethod={"resize"}
-            style={styles.avatarStyle}
-          />
-          <Text style={{ marginLeft: 16 }}>Hi There</Text>
-        </View>
-      </SafeAreaView>
-    </ImageBackground>
+    <View>
+      <ImageBackground
+        source={images.background}
+        style={styles.backgroundImage}>
+        <SafeAreaView style={{ flex: 1 }}>
+          <StatusBar barStyle={"dark-content"} translucent={true} />
+        </SafeAreaView>
+      </ImageBackground>
+      <View style={styles.userInfoStyle}>
+        <Image
+          source={images.avatar}
+          resizeMode={"cover"}
+          resizeMethod={"resize"}
+          style={styles.avatarStyle}
+        />
+        <Text style={{ marginLeft: 16 }}>Hi There</Text>
+      </View>
+    </View>
   );
 }
