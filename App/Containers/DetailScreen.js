@@ -20,7 +20,7 @@ function renderItem({ item, }) {
 export default function DetailScreen(props) {
   const {route} = props;
   const {params} = route
-
+  console.log('HERE', params)
   return (
     <View style={{ flex: 1 }}>
       <FlatList
@@ -28,9 +28,9 @@ export default function DetailScreen(props) {
         keyExtractor={item => item.id}
         renderItem={({item}) =>
           <View>
-              <Text>{route.params.header}</Text>
-            {/*<Text>{item.desc}</Text>*/}
-            {/*<Text>{item.content}</Text>*/}
+            <Text>{route.params.header}</Text>
+            <Text>{item.desc}</Text>
+            <Text>{item.content}</Text>
           </View>
         }
         style={{ marginTop: 5 }}
