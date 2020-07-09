@@ -32,6 +32,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     padding: 5,
     marginBottom: 10
+  },
+  listStyle : {
+    paddingBottom: 5,
+    marginBottom: (95 / 736) * Dimensions.get("screen").height
   }
 });
 export default styles;

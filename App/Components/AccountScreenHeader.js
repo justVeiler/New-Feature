@@ -16,7 +16,7 @@ export default function AccountScreenHeader() {
       <ImageBackground
         source={images.background}
         style={styles.backgroundImage}>
-        <SafeAreaView style={{ flex: 1 }}>
+        <SafeAreaView>
           <StatusBar barStyle={"dark-content"} translucent={true} />
         </SafeAreaView>
       </ImageBackground>

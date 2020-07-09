@@ -5,7 +5,7 @@ import AccountScreenHeader from "../Components/AccountScreenHeader";
 
 export default function AccountScreen() {
   return (
-    <View style={{ flex: 1, flexDirection: "column" }}>
+    <View style={{ flexDirection: "column" }}>
       <AccountScreenHeader />
       <AccountScreenInfoList />
     </View>
