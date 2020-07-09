@@ -1,39 +1,23 @@
-import React, {useState} from 'react';
-import {View, Text, FlatList, TouchableOpacity, TouchableHighlight} from 'react-native';
-import {navigate} from '../Navigation/RootNavigation';
-import newsData from '../Components/HomeScreenNewsData';
-
-function renderItem({ item, }) {
-  // const { route } = props;
-  // const { params } = route;
-  // const [show, setShow] = useState(true)
-
-  return (
-    <View  key={item.id} >
-      <Text>{item.header}</Text>
-      <Text>{item.desc}</Text>
-      <Text>{item.content}</Text>
-    </View>
-  );
-}
-
+import React from "react";
+import { View, SafeAreaView, Text, FlatList } from "react-native";
+import newsData from "../Components/HomeScreenNewsData";
+import styles from "../Components/Styles/HomeScreenNewsStyle";
 
 export default function DetailScreen(props) {
-  const {route} = props;
-  const {params} = route
-  console.log('HERE', params)
+  const { route } = props;
+  const { params } = route;
+  console.log("PAAAAA", params);
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, marginLeft: 16, marginRight: 16, marginTop: 40 }}>
       <FlatList
-        data={newsData}
-        keyExtractor={item => item.id}
-        renderItem={({item}) =>
+        data={[params]}
+        renderItem={() => (
           <View>
-            <Text>{params.item.header}</Text>
-            <Text>{params.item.desc}</Text>
-            <Text>{params.item.content}</Text>
+            <Text style={styles.headerText}>{params.item.header}</Text>
+            <Text style={styles.descText}>{params.item.desc}</Text>
+            <Text style={styles.contentText}>{params.item.content}</Text>
           </View>
-        }
+        )}
         style={{ marginTop: 5 }}
       />
     </View>
