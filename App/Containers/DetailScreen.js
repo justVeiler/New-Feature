@@ -17,6 +17,7 @@ function renderItem({ item, }) {
   );
 }
 
+
 export default function DetailScreen(props) {
   const {route} = props;
   const {params} = route
@@ -28,9 +29,9 @@ export default function DetailScreen(props) {
         keyExtractor={item => item.id}
         renderItem={({item}) =>
           <View>
-            <Text>{route.params.header}</Text>
-            <Text>{item.desc}</Text>
-            <Text>{item.content}</Text>
+            <Text>{params.item.header}</Text>
+            <Text>{params.item.desc}</Text>
+            <Text>{params.item.content}</Text>
           </View>
         }
         style={{ marginTop: 5 }}

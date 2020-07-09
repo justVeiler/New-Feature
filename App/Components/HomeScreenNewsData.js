@@ -27,7 +27,7 @@ const newsData = [
       "Thống kê của Sở Y tế Hà Nội ghi nhận 634 người mắc sốt xuất huyết, phân bố tại 28/30 quận huyện. Ba xã có nhiều bệnh nhân nhất gồm Tam Hiệp với 182 ca, Khánh Hà 48 ca, Thanh Thùy 44 ca."
   },
   {
-    id: "news4",
+    id: 4,
     header: "Huawei đang chịu sức ép lớn đến mức nào",
     desc: "VnExpress",
     content:

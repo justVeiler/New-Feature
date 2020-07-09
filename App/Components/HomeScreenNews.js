@@ -27,15 +27,15 @@ export default function HomeScreenNews(props) {
       <Text style={styles.headerStyle}>News</Text>
       <FlatList
         data={newsData}
-        keyExtractor={item => item.key}
+        keyExtractor={item => item.id}
         renderItem={
           ({item}) =>
           <View>
-          <TouchableOpacity onPress={() => navigate('DetailScreen', {id: item.id})}>
+          <TouchableOpacity onPress={() => navigate('DetailScreen', {item: item})}>
             <Text>{item.header}</Text>
 
             <Text>{item.desc}</Text>
-            <Text>{item.content}</Text>
+            {/*<Text>{item.content}</Text>*/}
           </TouchableOpacity>
           </View>
         }
