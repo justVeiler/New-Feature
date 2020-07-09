@@ -1,18 +1,16 @@
 import React, { Component } from "react";
-import {View, Image, TouchableOpacity, Animated} from 'react-native';
+import { View, Image, TouchableOpacity, Animated } from "react-native";
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
-import Camera from "./ImagePicker";
 import ImagePicker from "react-native-image-picker";
-import ImagePickingScreen from '../Containers/ImagePickingScreen';
+import ImagePickingScreen from "../Containers/ImagePickingScreen";
 
 export default class AddButtonCamera extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      filePath: {},
+      filePath: {}
     };
   }
 
@@ -35,14 +33,16 @@ export default class AddButtonCamera extends Component {
       navigate("ImagePickingScreen", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
+        navigate("HomeScreen");
       } else if (response.error) {
         console.log("ImagePicker Error: ", response.error);
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
         alert(response.customButton);
+        navigate("HomeScreen");
       } else {
         this.setState({
-          filePath: {uri: response.uri},
+          filePath: { uri: response.uri }
         });
       }
     });

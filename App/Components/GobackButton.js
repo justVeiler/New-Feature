@@ -1,21 +1,17 @@
 import React from "react";
-import { View, Image, TouchableOpacity, Text, Dimensions } from "react-native";
+import { View, Image, TouchableOpacity, Text } from "react-native";
 import images from "../Images/images";
-import colors from "../Themes/Colors";
+import { navigate } from "../Navigation/RootNavigation";
+import styles from "./Styles/GobackButtonStyle";
 
 export default function GobackButton() {
   return (
     <View>
       <TouchableOpacity
-        style={{ flexDirection: "row", alignItems: "flex-start", padding : 5, marginLeft: 11 }}>
-        <Image
-          source={images.back}
-          style={{
-            height: (18 / 736) * Dimensions.get("screen").height,
-            width: (12 / 414) * Dimensions.get("screen").width
-          }}
-        />
-        <Text style={{ marginLeft: 3, color:colors.blueGrey}}>Back</Text>
+        style={styles.container}
+        onPress={navigate("HomeScreen")}>
+        <Image source={images.back} style={styles.arrow} />
+        <Text style={styles.text}>Back</Text>
       </TouchableOpacity>
     </View>
   );
