@@ -39,7 +39,6 @@ export default class AddButtonCamera extends Component {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
         alert(response.customButton);
-        navigate("HomeScreen");
       } else {
         this.setState({
           filePath: { uri: response.uri }
