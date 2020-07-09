@@ -15,12 +15,12 @@ function renderItem({ item }) {
 
 export default function HomeScreenNews() {
   return (
-    <View style={{backgroundColor:"white", flexGrow : 1, zIndex: 1, marginTop : 100}}>
+    <View style={{ backgroundColor: "white", flexGrow: 1 }}>
       <Text style={styles.headerStyle}>News</Text>
       <FlatList
         data={newsData}
         renderItem={renderItem}
-        style={{ flex:1, flexGrow: 1 }}
+        style={{ flex: 1, flexGrow: 1 }}
       />
     </View>
   );
