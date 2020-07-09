@@ -6,7 +6,7 @@ import HomeScreenNews from "../Components/HomeScreenNews";
 
 export default function HomeScreen() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{flex: 1, flexGrow: 1,backgroundColor : "white"}}>
       <HomeScreenHeader />
       <HomeScreenSlide />
       <HomeScreenNews />
