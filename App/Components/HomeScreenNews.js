@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
-import {View, Text, FlatList, TouchableOpacity, TouchableHighlight} from 'react-native';
-import {navigate} from '../Navigation/RootNavigation';
+import React from "react";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./Styles/HomeScreenNewsStyle";
 import newsData from "./HomeScreenNewsData";
+import { navigate } from "../Navigation/RootNavigation";
 
-function renderItem({ item, }) {
-  // const { route } = props;
-  // const { params } = route;
-  // const [show, setShow] = useState(true)
-
+function renderItem({ item }) {
   return (
-    <TouchableOpacity style={styles.itemStyle} key={item.key} >
+    <TouchableOpacity
+      style={styles.itemStyle}
+      onPress={() => navigate("DetailScreen", { item: item })}>
       <Text style={styles.headerText}>{item.header}</Text>
       <Text style={styles.descText}>{item.desc}</Text>
       <Text style={styles.contentText}>{item.content}</Text>
@@ -18,27 +16,13 @@ function renderItem({ item, }) {
   );
 }
 
-export default function HomeScreenNews(props) {
-  // const {route} = props;
-  // const {params} = route
-
+export default function HomeScreenNews() {
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.headerStyle}>News</Text>
       <FlatList
         data={newsData}
-        keyExtractor={item => item.key}
-        renderItem={
-          ({item}) =>
-          <View>
-          <TouchableOpacity onPress={() => navigate('DetailScreen', {id: item.id})}>
-            <Text>{item.header}</Text>
-
-            <Text>{item.desc}</Text>
-            <Text>{item.content}</Text>
-          </TouchableOpacity>
-          </View>
-        }
+        renderItem={renderItem}
         style={{ marginTop: 5 }}
       />
     </View>
