@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     backgroundColor: '#7e58ff'
   }
-})
+});
 
 export default styles;
