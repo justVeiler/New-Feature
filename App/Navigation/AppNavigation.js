@@ -19,7 +19,6 @@ function AppNavigation() {
           name={"ImagePickingScreen"}
           component={ImagePickingScreen}
         />
-        <Stack.Screen name={"AccountScreen"} component={AccountScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

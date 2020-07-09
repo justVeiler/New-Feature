@@ -9,7 +9,7 @@ export default function GobackButton() {
     <View>
       <TouchableOpacity
         style={styles.container}
-        onPress={() => navigate("AccountScreen")}>
+        onPress={() => navigate("Account")}>
         <Image source={images.back} style={styles.arrow} />
         <Text style={styles.text}>Back</Text>
       </TouchableOpacity>
