@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     padding: 10,
-    marginLeft: 10,
+    left: 10,
     marginTop: (15 / 736) * Dimensions.get("screen").height,
     backgroundColor: "white",
     marginRight: (320 / 414) * Dimensions.get("screen").width
