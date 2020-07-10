@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../Containers/HomeScreen";
-import AddButtonCamera from '../Components/AddButtonCamera';
+import ImagePicking from '../Components/ImagePicking';
 import { Image } from "react-native";
 import images from "../Images/images";
 import AccountScreen from '../Containers/AccountScreen';
@@ -20,12 +20,12 @@ export default function BottomNavigator() {
           }}
         />
         <Tab.Screen
-          name={"AddButtonCamera"}
+          name={"ImagePicking"}
           component={''}
           options={{
             // unmountOnBlur: false,
             tabBarLabel: "",
-            tabBarIcon: ({}) => <AddButtonCamera />
+            tabBarIcon: ({}) => <ImagePicking />
           }}
           listeners={{
             tabPress: (e) => {

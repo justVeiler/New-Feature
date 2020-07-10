@@ -6,7 +6,7 @@ import images from "../Images/images";
 import ImagePicker from "react-native-image-picker";
 import ImagePickingScreen from "../Containers/ImagePickingScreen";
 
-export default class AddButtonCamera extends Component {
+export default class ImagePicking extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,6 @@ export default class AddButtonCamera extends Component {
   }
 
   handlePress = () => {
-    // const { navigation } = this.props;
     const options = {
       title: "Select Image",
       customButtons: [
@@ -29,7 +28,6 @@ export default class AddButtonCamera extends Component {
     ImagePicker.showImagePicker(options, response => {
       // console.log("Response = ", response);
       const { uri } = response;
-      // console.log("URI", uri);
       navigate("ImagePickingScreen", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
