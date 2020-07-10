@@ -1,5 +1,4 @@
-const ImagePicker = require("react-native-image-picker");
-
+import ImagePicker from "react-native-image-picker"
 const options = {
   title: "Select Avatar",
   customButtons: [{ name: "fb", title: "Choose Photo from Facebook" }],
@@ -24,4 +23,4 @@ const pick = cb => {
   });
 };
 
-module.exports = pick;
+export default pick;
