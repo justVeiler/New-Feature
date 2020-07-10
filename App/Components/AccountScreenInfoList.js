@@ -1,15 +1,21 @@
 import React from "react";
-import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./Styles/AccountScreenInfoListStyle";
 import accountData from "./AccountScreenData";
 
-export default function AccountScreenInfoList(props) {
-  const { params } = props;
-  const { uri } = params;
-  console.log("PROPS", params);
-
+function renderItem({ item }) {
   return (
-    <View style={{ flex: 1 }}>
+    <TouchableOpacity style={styles.itemStyle}>
+      <Text style={styles.headerText}>{item.header}</Text>
+      <Text style={styles.descText}>{item.desc}</Text>
+      <Text style={styles.contentText}>{item.content}</Text>
+    </TouchableOpacity>
+  );
+}
+
+export default function AccountScreenInfoList() {
+  return (
+    <View style={{flex: 1}}>
       <Text style={styles.headerStyle}>History</Text>
       <FlatList
         data={accountData}
@@ -17,13 +23,5 @@ export default function AccountScreenInfoList(props) {
         style={{ marginTop: 5 }}
       />
     </View>
-  );
-}
-function renderItem({ props }) {
-  const { params } = props;
-  return (
-    <TouchableOpacity style={styles.itemStyle}>
-      <Image source={params} style={{ width: 200, height: 200 }} />
-    </TouchableOpacity>
   );
 }

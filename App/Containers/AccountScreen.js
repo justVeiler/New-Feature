@@ -6,11 +6,12 @@ import AccountScreenHeader from "../Components/AccountScreenHeader";
 export default function AccountScreen(props) {
   const { route } = props;
   const { params } = route;
-  console.log("PADAM", params);
+  const { uri } = params;
+  console.log("URI", uri);
   return (
     <ScrollView style={{ flex: 1 }}>
       <AccountScreenHeader />
-      <AccountScreenInfoList param={params} />
+      <AccountScreenInfoList uri={uri} />
     </ScrollView>
   );
 }
