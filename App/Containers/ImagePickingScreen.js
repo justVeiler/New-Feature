@@ -2,26 +2,17 @@ import React, { useContext, useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
 import GobackButton from "../Components/GobackButton";
-import { AppContext } from "../Providers/AppProvider";
+import { navigate } from "../Navigation/RootNavigation";
 
 export default function ImagePickingScreen(props) {
   const { route } = props;
   const { params } = route;
-  const [imageSource, setImageSource] = useState({});
-  console.log("PAAAAA", params);
-  const appContext = useContext(AppContext);
-  const { uploadHistory } = appContext;
-  console.log("CONTEXT", appContext);
-  console.log("Source", imageSource);
   const getOnpress = () => {
-    try {
-      (async function() {
-        setImageSource(params.uri);
-        console.log("UPLOAD HISTORY");
-        await uploadHistory();
-      })();
-    } catch (e) {}
+    navigate("AccountScreen", {
+      uri: params.uri
+    });
   };
+
   return (
     <View style={styles.container}>
       <GobackButton />

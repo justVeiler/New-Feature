@@ -16,10 +16,10 @@ export default function Wrapper(props) {
   );
 }
 
-const uploadHistory = dispatch => async () => {
+const uploadHistory = dispatch => async data => {
   console.log("DISPATCHed");
-  await dispatch({ type: AppActions.uploadHistory, payload: imageSource });
-  return console.log("SOURCEEEE", imageSource);
+  await dispatch({ type: AppActions.uploadHistory, payload: data });
+  return console.log("DATA", data);
 };
 
 const mapActionsToDispatch = dispatch => {
