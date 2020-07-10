@@ -1,12 +1,10 @@
 import React from "react";
-import { View, SafeAreaView, Text, FlatList } from "react-native";
-import newsData from "../Components/HomeScreenNewsData";
+import { View, Text, FlatList } from "react-native";
 import styles from "../Components/Styles/HomeScreenNewsStyle";
 
 export default function DetailScreen(props) {
   const { route } = props;
   const { params } = route;
-  console.log("PAAAAA", params);
   return (
     <View style={{ flex: 1, marginLeft: 16, marginRight: 16, marginTop: 40 }}>
       <FlatList

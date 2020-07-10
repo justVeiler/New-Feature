@@ -10,7 +10,7 @@ export default class ImagePicking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: {}
+      imageSource: {}
     };
   }
 
@@ -28,7 +28,10 @@ export default class ImagePicking extends Component {
     ImagePicker.showImagePicker(options, response => {
       // console.log("Response = ", response);
       const { uri } = response;
-      navigate("ImagePickingScreen", { uri: uri });
+      navigate("ImagePickingScreen", {
+        uri: uri,
+        response: response
+      });
       if (response.didCancel) {
         console.log("User cancelled image picker");
         navigate("HomeScreen");
@@ -39,7 +42,7 @@ export default class ImagePicking extends Component {
         alert(response.customButton);
       } else {
         this.setState({
-          filePath: { uri: response.uri }
+          imageSource: { uri: response.uri }
         });
       }
     });

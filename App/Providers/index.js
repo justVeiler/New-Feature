@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import AppProvider from "./AppProvider";
 
 const ContextProviderComposer = ({ contextProviders, children }) => {
   return contextProviders.reduceRight(
@@ -9,6 +10,9 @@ const ContextProviderComposer = ({ contextProviders, children }) => {
 
 export default function Provider(props) {
   return (
-    <ContextProviderComposer contextProviders={[]} children={props.children} />
+    <ContextProviderComposer
+      contextProviders={[<AppProvider key={"image"} />]}
+      children={props.children}
+    />
   );
 }
