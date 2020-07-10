@@ -28,7 +28,7 @@ export default class ImagePicking extends Component {
     ImagePicker.showImagePicker(options, response => {
       // console.log("Response = ", response);
       const { uri } = response;
-      navigate("ImagePickingScreen", { uri: uri });
+      navigate("ImagePickingScreen", { uri: uri, response: response });
       if (response.didCancel) {
         console.log("User cancelled image picker");
         navigate("HomeScreen");
