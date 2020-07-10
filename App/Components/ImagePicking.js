@@ -1,8 +1,12 @@
-import ImagePicker from "react-native-image-picker";
+import React, { Component } from "react";
+import { View, Image, TouchableOpacity, Animated } from "react-native";
 import { navigate } from "../Navigation/RootNavigation";
-import React from "react";
+import styles from "./Styles/AddButtonCameraStyle";
+import images from "../Images/images";
+import ImagePicker from "react-native-image-picker";
+import ImagePickingScreen from "../Containers/ImagePickingScreen";
 
-export default class ImagePicking extends React.Component {
+export default class ImagePicking extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +28,6 @@ export default class ImagePicking extends React.Component {
     ImagePicker.showImagePicker(options, response => {
       // console.log("Response = ", response);
       const { uri } = response;
-      // console.log("URI", uri);
       navigate("ImagePickingScreen", { uri: uri });
       if (response.didCancel) {
         console.log("User cancelled image picker");
@@ -41,4 +44,17 @@ export default class ImagePicking extends React.Component {
       }
     });
   };
+  render() {
+    return (
+      <View style={styles.container}>
+        <Animated.View style={[styles.button]}>
+          <TouchableOpacity
+            underlayColor={"#7f58ff"}
+            onPress={this.handlePress.bind(this)}>
+            <Image source={images.plus} />
+          </TouchableOpacity>
+        </Animated.View>
+      </View>
+    );
+  }
 }
