@@ -10,7 +10,7 @@ export default class ImagePicking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: {}
+      imageSource: {}
     };
   }
 
@@ -39,7 +39,7 @@ export default class ImagePicking extends Component {
         alert(response.customButton);
       } else {
         this.setState({
-          filePath: { uri: response.uri }
+          imageSource: { uri: response.uri }
         });
       }
     });
