@@ -5,6 +5,7 @@ import ImagePicking from "../Components/ImagePicking";
 import { Image } from "react-native";
 import images from "../Images/images";
 import AccountScreen from "../Containers/AccountScreen";
+import ImagePickingScreen from "../Containers/ImagePickingScreen";
 
 export const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ export default function BottomNavigator() {
       />
       <Tab.Screen
         name={"ImagePickingScreen"}
-        component={""}
+        component={ImagePickingScreen}
         options={{
           // unmountOnBlur: false,
           tabBarLabel: "",
