@@ -30,11 +30,9 @@ export default class ImagePickingScreen extends React.Component {
         <View style={styles.container}>
           <Image source={{ uri: params.uri }} style={styles.image} />
           <TouchableOpacity
-            style={{ backgroundColor: "red", width: 200, height: 200 }}>
+            style={styles.buttonUpload}>
             <Text>UPLOAD</Text>
           </TouchableOpacity>
-
-          {/*<Text style={styles.sourceText}>{"Source: " + route.params.uri}</Text>*/}
         </View>
       </View>
     );
