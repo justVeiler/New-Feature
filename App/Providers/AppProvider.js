@@ -1,5 +1,5 @@
 import initialState, { AppReducers } from "../ReduxHooks/AppReducers";
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 import { AppActions } from "../ReduxHooks/AppActions";
 
 export const AppContext = createContext({});
@@ -16,10 +16,10 @@ export default function Wrapper(props) {
   );
 }
 
-const uploadHistory = dispatch => async (): void => {
-  const { data } = await response;
-  console.log(data);
-  dispatch({ type: AppActions.uploadHistory });
+const uploadHistory = dispatch => async () => {
+  console.log("DISPATCHed");
+  await dispatch({ type: AppActions.uploadHistory, payload: imageSource });
+  return console.log("SOURCEEEE", imageSource);
 };
 
 const mapActionsToDispatch = dispatch => {

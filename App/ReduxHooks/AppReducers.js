@@ -6,8 +6,8 @@ export const initialState = {
 
 export const AppReducers = (state, action) => {
   if (action.type === AppActions.uploadHistory) {
-    const imageSource = action.payload;
-    return { ...state, imageSource: imageSource };
+    const data = action.payload;
+    return { ...state, data: data };
   } else {
     return state;
   }
