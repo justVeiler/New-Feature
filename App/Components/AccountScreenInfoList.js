@@ -3,6 +3,7 @@ import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import styles from "./Styles/AccountScreenInfoListStyle";
 import accountData from "./AccountScreenData";
 
+
 function renderItem({ item }) {
   return (
     <TouchableOpacity style={styles.itemStyle}>
