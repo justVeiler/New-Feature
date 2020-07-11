@@ -35,15 +35,15 @@ export default class AccountScreenInfoList extends Component{
       <View style={{flex: 1}}>
         <Text style={styles.headerStyle}>History</Text>
         {/*<Text style={styles.headerStyle}>{this._handleButtonPress}</Text>*/}
-
-              <Image
-                source={{uri: uri}}
-                style={{
-                  width: 300,
-                  height: 100,
-                }}
-              />
-
+        <View style={{alignItems: 'center', marginTop: 10,}}>
+          <Image
+            source={{uri: uri}}
+            style={{
+              width: 300,
+              height: 100,
+            }}
+          />
+        </View>
       </View>
     );
   }

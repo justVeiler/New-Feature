@@ -5,6 +5,7 @@ import GobackButton from "../Components/GobackButton";
 import RNFetchBlob from 'rn-fetch-blob';
 import CameraRoll from '@react-native-community/cameraroll';
 import {navigate} from '../Navigation/RootNavigation';
+import colors from '../Themes/Colors';
 
 export default function ImagePickingScreen (props) {
   // constructor(props) {
@@ -38,13 +39,14 @@ export default function ImagePickingScreen (props) {
     return (
       <View style={styles.container}>
         <GobackButton />
-        <View style={styles.container}>
+        <View style={styles.container1}>
           <Image source={{ uri: params.uri }} style={styles.image} />
           <Text style={styles.sourceText}>{"Source: " + route.params.uri}</Text>
+          <TouchableOpacity onPress={Upload} style={styles.btnUpload}>
+            <Text style={styles.textUpload}>Upload</Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={Upload} style={{padding: 10}}>
-          <Text >Upload</Text>
-        </TouchableOpacity>
+
       </View>
     );
 }
