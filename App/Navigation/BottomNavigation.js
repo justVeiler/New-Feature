@@ -35,7 +35,7 @@ export default function BottomNavigator() {
         />
 
         <Tab.Screen
-          name={"Account"}
+          name={"AccountScreen"}
           component={AccountScreen}
           options={{
             tabBarLabel: "Account",

@@ -4,6 +4,7 @@ import styles from "../Components/Styles/ImagePickingScreenStyle";
 import GobackButton from "../Components/GobackButton";
 import RNFetchBlob from 'rn-fetch-blob';
 import CameraRoll from '@react-native-community/cameraroll';
+import {navigate} from '../Navigation/RootNavigation';
 
 export default function ImagePickingScreen (props) {
   // constructor(props) {
@@ -17,21 +18,21 @@ export default function ImagePickingScreen (props) {
   const { params } = route;
 
   const Upload = async () => {
-
     const response = params;
     const {uri} = response;
-    console.log('here', response, uri)
-
-    console.log("HERE", response);
-    RNFetchBlob.fetch('GET', 'http://192.168.1.14', {
+    RNFetchBlob.fetch('GET', 'http://192.168.1.184',{
     },[
-      {name: 'image', filename: 'image.png', type: 'image/png', uri: state.uri}
+      {name: 'Image', filename: 'image.png', type: 'image/png', uri: uri}
     ]).then((resp) => {
-
+      console.log('aaa', resp)
+      navigate('Account', {uri: resp})
     }).then((err) => {
 
     })
-    console.log('aaa0', )
+    if (uri !== null) {
+      navigate('AccountScreen', {uri: uri})
+    }
+
   }
 
     return (
