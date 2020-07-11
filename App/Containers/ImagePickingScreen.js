@@ -16,6 +16,7 @@ export default function ImagePickingScreen (props) {
   // }
   const { route } = props;
   const { params } = route;
+  console.log('aaa', params)
 
   const Upload = async () => {
     const response = params;
@@ -25,14 +26,13 @@ export default function ImagePickingScreen (props) {
       {name: 'Image', filename: 'image.png', type: 'image/png', uri: uri}
     ]).then((resp) => {
       console.log('aaa', resp)
-      navigate('Account', {uri: resp})
+      alert(JSON.stringify(resp));
     }).then((err) => {
-
     })
     if (uri !== null) {
       navigate('AccountScreen', {uri: uri})
     }
-
+    return response;
   }
 
     return (
