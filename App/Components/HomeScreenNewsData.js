@@ -3,14 +3,14 @@ import details from '../Containers/DetailScreen';
 
 const newsData = [
   {
-    id: 1,
+    key: 'new1',
     header: "Việt Nam tụt 11 hạng về tốc độ Internet di động",
     desc: "VnExpress",
     content:
       "Tốc độ Internet di động tại Việt Nam trong tháng 5 xếp thứ 60 trên thế giới, tụt 11 hạng so với tháng 4"
   },
   {
-    id: 2,
+    key: 'new2',
     header: "'Thiết bị tiết kiệm điện không như quảng cáo'",
     desc: "VnExpress",
     content:
@@ -18,7 +18,7 @@ const newsData = [
   },
 
   {
-    id: 3,
+    key: 'new3',
     header: "Hà Nội xuất hiện 3 ổ dịch sốt xuất huyết",
     desc: "VnExpress",
     content:
@@ -27,7 +27,7 @@ const newsData = [
       "Thống kê của Sở Y tế Hà Nội ghi nhận 634 người mắc sốt xuất huyết, phân bố tại 28/30 quận huyện. Ba xã có nhiều bệnh nhân nhất gồm Tam Hiệp với 182 ca, Khánh Hà 48 ca, Thanh Thùy 44 ca."
   },
   {
-    id: 4,
+    key: 'new4',
     header: "Huawei đang chịu sức ép lớn đến mức nào",
     desc: "VnExpress",
     content:
