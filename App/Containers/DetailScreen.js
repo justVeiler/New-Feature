@@ -6,7 +6,7 @@ export default function DetailScreen(props) {
   const { route } = props;
   const { params } = route;
   return (
-    <View style={{ flex: 1, marginLeft: 16, marginRight: 16, marginTop: 40 }}>
+    <View style={styles.container}>
       <FlatList
         data={[params]}
         renderItem={() => (
