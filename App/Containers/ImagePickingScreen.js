@@ -11,7 +11,7 @@ export default function ImagePickingScreen(props) {
   const onPress = () => {
     try {
       (async function() {
-        await AsyncStorage.setItem("URI", uri);
+        await AsyncStorage.setItem("uri", uri);
       })();
     } catch (e) {}
   };
