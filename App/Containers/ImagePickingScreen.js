@@ -1,27 +1,29 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
 import GobackButton from "../Components/GobackButton";
+import { navigate } from "../Navigation/RootNavigation";
 
-export default class ImagePickingScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      filePath: {}
-    };
-  }
+export default function ImagePickingScreen(props) {
+  const { route } = props;
+  const { params } = route;
+  const onPress = () => {
+    navigate("AccountScreen", {
+      uri: params.uri
+    });
+  };
 
-  render() {
-    const { route } = this.props;
-    const { params } = route;
-    return (
+  return (
+    <View style={styles.container}>
+      <GobackButton />
       <View style={styles.container}>
-        <GobackButton />
-        <View style={styles.container}>
-          <Image source={{ uri: params.uri }} style={styles.image} />
-          <Text style={styles.sourceText}>{"Source: " + route.params.uri}</Text>
-        </View>
+        <Image source={{ uri: params.uri }} style={styles.image} />
+        <TouchableOpacity
+          style={styles.buttonUpload}
+          onPress={() => onPress()}>
+          <Text>UPLOAD</Text>
+        </TouchableOpacity>
       </View>
-    );
-  }
+    </View>
+  );
 }

@@ -1,18 +1,20 @@
 import React, { Component } from "react";
-import { View, Image, TouchableOpacity, Animated } from "react-native";
+import {View, Image, TouchableOpacity, Animated, AsyncStorage} from 'react-native';
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
 import ImagePicker from "react-native-image-picker";
 import ImagePickingScreen from "../Containers/ImagePickingScreen";
+import newsData from './HomeScreenNewsData';
 
 export default class ImagePicking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: {}
+      imageSource: {}
     };
   }
+
 
   handlePress = () => {
     const options = {
@@ -28,7 +30,10 @@ export default class ImagePicking extends Component {
     ImagePicker.showImagePicker(options, response => {
       // console.log("Response = ", response);
       const { uri } = response;
-      navigate("ImagePickingScreen", { uri: uri });
+      navigate("ImagePickingScreen", {
+        uri: uri,
+        response: response
+      });
       if (response.didCancel) {
         console.log("User cancelled image picker");
         navigate("HomeScreen");
@@ -39,10 +44,11 @@ export default class ImagePicking extends Component {
         alert(response.customButton);
       } else {
         this.setState({
-          filePath: { uri: response.uri }
+          imageSource: { uri: response.uri }
         });
       }
-    });
+    })
+
   };
   render() {
     return (
