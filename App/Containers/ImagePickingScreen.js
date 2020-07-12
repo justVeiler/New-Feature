@@ -2,7 +2,7 @@ import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
 import GobackButton from "../Components/GobackButton";
-import AsyncStorage from "@react-native-community/async-storage";
+import CameraRoll from "@react-native-community/cameraroll";
 
 export default function ImagePickingScreen(props) {
   const { route } = props;
@@ -11,7 +11,7 @@ export default function ImagePickingScreen(props) {
   const onPress = () => {
     try {
       (async function() {
-        await AsyncStorage.setItem("uri", uri);
+        await CameraRoll.save("pic1");
       })();
     } catch (e) {}
   };
