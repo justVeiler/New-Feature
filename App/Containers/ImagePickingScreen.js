@@ -53,7 +53,6 @@ export default class ImagePickingScreen extends Component{
     },[
       {name: 'Image', filename: 'image.png', type: 'image/png', uri: uri}
     ]).then((resp) => {
-      console.log('aaa', resp)
       alert(JSON.stringify(resp));
       this.saveToCameraRoll()
     }).then(image => {
