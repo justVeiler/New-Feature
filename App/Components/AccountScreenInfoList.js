@@ -1,42 +1,56 @@
 import React, {Component} from 'react';
-import { View, Text, TouchableOpacity, Image, PermissionsAndroid, Platform, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, Image, PermissionsAndroid, FlatList, ScrollView } from "react-native";
 import styles from "./Styles/AccountScreenInfoListStyle";
 import accountData from "./AccountScreenData";
 import ImagePicker from 'react-native-image-picker';
 import CameraRoll from '@react-native-community/cameraroll';
+import images from '../Images/images';
 
 
-export default class AccountScreenInfoList extends Component {
-  constructor(props) {
-    super(props);
+export default function AccountScreenInfoList(props){
+  // constructor(props) {
+  //   super(props);
+  //
+  //   this.state = {
+  //     photos: []
+  //   };
+  // }
 
-    this.state = {
-      photos: ''
-    };
+  const ProductItem = ({image}) => {
+    return(
+      <View>
+        <Image source={image} />
+      </View>
+    )
+    try {
+      (async function() {
+        await CameraRoll.saveToCameraRoll('GET','photo');
+      })();
+    } catch (e) {}
   }
 
-  _handleButtonPress = () => {
-    CameraRoll.getPhotos({
-      first: 20,
-      assetType: 'Photos',
-    })
-      .then(r => {
-        this.setState({photos: r.edges});
-      })
-      .catch((err) => {
-        //Error Loading Images
-      });
-  };
+  console.log('ggg', ProductItem)
 
-  render() {
-    const {params} = this.props;
+    const {params} = props;
     const {uri} = params
-    console.log('xxx', params)
-
     return (
       <View style={{flex: 1}}>
         <Text style={styles.headerStyle}>History</Text>
         <View style={{alignItems: 'center', marginTop: 10,}}>
+          {/*<ScrollView>*/}
+          {/*  <View>*/}
+          {/*    {[*/}
+          {/*      {image1: uri},*/}
+          {/*    ].map((e, index) => (*/}
+          {/*      <View key={index.toString()}>*/}
+          {/*        <ProductItem*/}
+          {/*        image={e.image1}*/}
+          {/*        />*/}
+          {/*      </View>*/}
+
+          {/*    ))}*/}
+          {/*  </View>*/}
+          {/*</ScrollView>*/}
           <Image
             source={{uri: uri}}
             style={{
@@ -47,5 +61,4 @@ export default class AccountScreenInfoList extends Component {
         </View>
       </View>
     );
-  }
 }
