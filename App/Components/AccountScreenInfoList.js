@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import accountData from "../Components/AccountScreenData";
 import styles from "./Styles/AccountScreenInfoListStyle";
-import AsyncStorage from "@react-native-community/async-storage";
 
 function renderItems({ item }) {
   console.log("URIII", item.uri);
