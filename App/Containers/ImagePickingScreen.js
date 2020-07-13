@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
 import GobackButton from "../Components/GobackButton";
 import { AppContext } from "../Providers/AppProvider";
-import AsyncStorage from "@react-native-community/async-storage";
 
 export default function ImagePickingScreen(props) {
   const { route } = props;
   const { params } = route;
   const { uri } = params;
-  async function onPress() {
+
+  const appContext = useContext(AppContext);
+  const { saveImage } = appContext;
+
+  const onPress = () => {
     try {
-      await AsyncStorage.setItem("URI", await JSON.stringify(uri));
+      (async function() {
+        await saveImage(uri);
+      })();
     } catch (e) {}
-  }
-  const veiler = AsyncStorage.getItem("URI").then(uri => JSON.parse(uri));
-  console.log("VEILER", veiler);
+  };
   return (
     <View style={styles.container}>
       <GobackButton />
