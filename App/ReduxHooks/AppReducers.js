@@ -1,4 +1,5 @@
 import { AppActions } from "./AppActions";
+import {LocalStorage} from '../Lib/LocalStorage';
 
 export const initialState = {
   images: []
@@ -10,6 +11,8 @@ export const AppReducers = (state, action) => {
     const newImages = [...state.images];
     newImages.unshift(uri);
     return { ...state, images: newImages };
+  } else if (action.type === AppActions.loadSavedImages) {
+    return { ...state, images: action.payload };
   } else {
     return state;
   }
