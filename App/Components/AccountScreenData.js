@@ -11,7 +11,8 @@ function accountData() {
       uri: data.data
     }
   ];
-  return array.push(data.data);
+  console.log("ARRAY", array);
+  return array.concat(data.data);
 }
 
 export default accountData;

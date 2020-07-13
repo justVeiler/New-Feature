@@ -1,23 +1,31 @@
 import React, { useContext } from "react";
 import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
-import accountData from "../Components/AccountScreenData";
 import styles from "./Styles/AccountScreenInfoListStyle";
 import { AppContext } from "../Providers/AppProvider";
 
 export default function AccountScreenInfoList() {
   const appContext = useContext(AppContext);
-  const data = appContext.state;
+  const data = appContext.state.data;
+  const imageList = [
+    {
+      key: "1",
+      uri: data
+    }
+  ];
+
+  const renderItem = ({ item }) => (
+    <TouchableOpacity>
+      <Image source={item.uri} style={styles.imageStyle} />
+      <Image source={item.uri} style={styles.imageStyle} />
+    </TouchableOpacity>
+  );
+
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.headerStyle}>History</Text>
       <FlatList
-        data={[accountData]}
-        renderItem={() => (
-          <TouchableOpacity>
-            <Image source={{ uri: data.data }} style={styles.imageStyle} />
-            <Image source={{ uri: data.data }} style={styles.imageStyle} />
-          </TouchableOpacity>
-        )}
+        data={imageList}
+        renderItem={renderItem}
         style={{ marginTop: 5 }}
       />
     </View>
