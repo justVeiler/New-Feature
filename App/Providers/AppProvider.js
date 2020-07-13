@@ -1,5 +1,5 @@
 import initialState, { AppReducers } from "../ReduxHooks/AppReducers";
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 import { AppActions } from "../ReduxHooks/AppActions";
 
 export const AppContext = createContext({});

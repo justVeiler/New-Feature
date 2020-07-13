@@ -7,7 +7,6 @@ import CameraRoll from "@react-native-community/cameraroll";
 export default function ImagePickingScreen(props) {
   const { route } = props;
   const { params } = route;
-  const { uri } = params;
   const onPress = () => {
     try {
       (async function() {

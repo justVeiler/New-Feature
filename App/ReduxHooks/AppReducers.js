@@ -1,7 +1,7 @@
 import { AppActions } from "./AppActions";
 
 export const initialState = {
-  imageSource: ""
+  data: {}
 };
 
 export const AppReducers = (state, action) => {
