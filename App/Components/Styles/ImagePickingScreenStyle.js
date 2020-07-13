@@ -31,6 +31,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 16,
     marginTop: 10
+  },
+  buttonUpload: {
+    backgroundColor: "blue",
+    width: 100,
+    height: 100,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft : 16
   }
 });
 

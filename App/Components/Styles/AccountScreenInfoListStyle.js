@@ -10,16 +10,13 @@ const styles = StyleSheet.create({
     fontSize: 26,
     color: Colors.blueGrey,
     marginTop: (5 / 736) * Dimensions.get("screen").height,
-    paddingBottom : 5
+    paddingBottom: 5
   },
-  itemStyle: {
-    marginLeft: 18,
-    marginRight: 18
-  },
+  imageStyle: { width: 110, height: 110, marginLeft: 18, marginRight: 18 },
   headerText: {
     lineHeight: 26,
     fontSize: 22,
-    padding : 5
+    padding: 5
   },
   descText: {
     lineHeight: 18,
