@@ -18,7 +18,9 @@ export default function Wrapper(props) {
 
 const saveImage = dispatch => async data => {
   console.log("DISPATCHed");
-  await dispatch({ type: AppActions.saveImage, payload: data });
+  await
+
+      dispatch({ type: AppActions.saveImage, payload: data });
   return console.log("DATA", data);
 };
 
