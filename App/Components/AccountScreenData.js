@@ -3,12 +3,12 @@ import { useContext } from "react";
 
 function accountData() {
   const appContext = useContext(AppContext);
-  const uri = appContext.state;
-  console.log("URI", uri);
-  return console.log("COME HERE")[
+  const data = appContext.state;
+  console.log("TADA", uri);
+  return [
     {
       key: "key1",
-      uri: uri
+      uri: data.data
     }
   ];
 }
