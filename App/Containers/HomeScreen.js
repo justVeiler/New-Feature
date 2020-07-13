@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import HomeScreenHeader from "../Components/HomeScreenHeader";
 import HomeScreenSlide from "../Components/HomeScreenSlide";
 import HomeScreenNews from "../Components/HomeScreenNews";
