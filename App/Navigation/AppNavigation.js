@@ -7,7 +7,6 @@ import { navigationRef } from "../Navigation/RootNavigation";
 import HomeScreen from "../Containers/HomeScreen";
 import ImagePickingScreen from "../Containers/ImagePickingScreen";
 import DetailScreen from '../Containers/DetailScreen';
-import HomeScreenNewsDara from '../Components/HomeScreenNewsData'
 
 const Stack = createStackNavigator();
 

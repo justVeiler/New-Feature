@@ -1,5 +1,5 @@
 export const AppActions = {
-    uploadHistory: "CHECK UPLOAD HISTORY"
+    saveImage: "CHECK UPLOAD HISTORY"
 };
 
 

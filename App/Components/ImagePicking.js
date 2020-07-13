@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import {View, Image, TouchableOpacity, Animated, AsyncStorage} from 'react-native';
+import { View, Image, TouchableOpacity, Animated } from "react-native";
 import { navigate } from "../Navigation/RootNavigation";
 import styles from "./Styles/AddButtonCameraStyle";
 import images from "../Images/images";
 import ImagePicker from "react-native-image-picker";
 import ImagePickingScreen from "../Containers/ImagePickingScreen";
-import newsData from './HomeScreenNewsData';
 
 export default class ImagePicking extends Component {
   constructor(props) {
@@ -14,7 +13,6 @@ export default class ImagePicking extends Component {
       imageSource: {}
     };
   }
-
 
   handlePress = () => {
     const options = {
@@ -47,8 +45,7 @@ export default class ImagePicking extends Component {
           imageSource: { uri: response.uri }
         });
       }
-    })
-
+    });
   };
   render() {
     return (
