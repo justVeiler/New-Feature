@@ -5,7 +5,7 @@ export const initialState = {
 };
 
 export const AppReducers = (state, action) => {
-  if (action.type === AppActions.uploadHistory) {
+  if (action.type === AppActions.saveImage) {
     const data = action.payload;
     return { ...state, data: data };
   } else {
