@@ -7,7 +7,6 @@ import { AppContext } from "../Providers/AppProvider";
 export default function AccountScreenInfoList() {
   const appContext = useContext(AppContext);
   const data = appContext.state;
-  console.log("URI", data);
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.headerStyle}>History</Text>
@@ -15,6 +14,7 @@ export default function AccountScreenInfoList() {
         data={[accountData]}
         renderItem={() => (
           <TouchableOpacity>
+            <Image source={{ uri: data.data }} style={styles.imageStyle} />
             <Image source={{ uri: data.data }} style={styles.imageStyle} />
           </TouchableOpacity>
         )}
