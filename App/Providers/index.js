@@ -11,7 +11,7 @@ const ContextProviderComposer = ({ contextProviders, children }) => {
 export default function Provider(props) {
   return (
     <ContextProviderComposer
-      contextProviders={[<AppProvider key={"image"} />]}
+      contextProviders={[<AppProvider key={"uri"} />]}
       children={props.children}
     />
   );
