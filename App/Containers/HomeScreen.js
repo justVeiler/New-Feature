@@ -8,6 +8,7 @@ import newsData from "../Components/HomeScreenNewsData";
 
 export default function HomeScreen() {
   const { loadSavedImages } = useContext(AppContext);
+
   useEffect(() => {
     try {
       (async function() {
@@ -36,6 +37,7 @@ export default function HomeScreen() {
       style={styles.flatListStyle}
       data={newsData}
       renderItem={renderItem}
+      showsVerticalScrollIndicator={false}
       ListHeaderComponent={<HomeScreenHeader />}
       ListHeaderComponentStyle={styles.headerComponentStyle}
     />

@@ -4,19 +4,18 @@ const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     width: "100%",
-    height: (160 / 736) * Dimensions.get("screen").height
+    height: (170 / 736) * Dimensions.get("screen").height
   },
   avatarStyle: {
-    width: (120 / 414) * Dimensions.get("screen").width,
-    height: (100 / 736) * Dimensions.get("screen").height,
+    width: 110,
+    height: 110,
     borderRadius: 60,
-    marginLeft: 16,
-    marginTop : (10 / 736) * Dimensions.get("screen").height
+    marginLeft: 16
   },
   userInfoStyle: {
-    zIndex:1,
+    zIndex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "center"
   }
 });
 export default styles;

@@ -4,7 +4,7 @@ import {
   StatusBar,
   SafeAreaView,
   Text,
-  View,
+  View
 } from "react-native";
 import images from "../Images/images";
 import styles from "./Styles/HomeScreenHeaderStyle";
@@ -21,8 +21,7 @@ export default function HomeScreenHeader() {
         />
       </SafeAreaView>
       <Text style={styles.text}>Welcome</Text>
-      <View
-        style={styles.slideStyle}>
+      <View style={styles.slideStyle}>
         <HomeScreenSlide />
       </View>
     </ImageBackground>
