@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
-import GobackButton from "../Components/GobackButton";
+import ImagePickingScreenGobackButton from "../Components/ImagePickingScreenGobackButton";
 import { AppContext } from "../Providers/AppProvider";
 import { navigate } from "../Navigation/RootNavigation";
 
@@ -22,7 +22,7 @@ export default function ImagePickingScreen(props) {
 
   return (
     <View style={styles.container}>
-      <GobackButton />
+      <ImagePickingScreenGobackButton />
       <View style={styles.container}>
         <Image source={{ uri: params.uri }} style={styles.image} />
         <TouchableOpacity style={styles.buttonUpload} onPress={onPress}>
