@@ -16,7 +16,7 @@ export default function AccountScreenHeader() {
         source={images.background}
         style={styles.backgroundImage}>
         <SafeAreaView style={{flex: 1 , justifyContent:'center'}}>
-          <StatusBar barStyle={"light-content"} translucent={true} />
+          <StatusBar barStyle={"dark-content"} translucent={true} />
           <TouchableOpacity style={styles.userInfoStyle}>
             <Image source={images.avatar} style={styles.avatarStyle} />
             <Text style={{ marginLeft: 16 }}>Hi There</Text>
