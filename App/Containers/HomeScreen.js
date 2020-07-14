@@ -37,6 +37,7 @@ export default function HomeScreen() {
       style={styles.flatListStyle}
       data={newsData}
       renderItem={renderItem}
+      showsVerticalScrollIndicator={false}
       ListHeaderComponent={<HomeScreenHeader />}
       ListHeaderComponentStyle={styles.headerComponentStyle}
     />

@@ -14,6 +14,7 @@ export default function AccountScreen() {
     return (
       <View>
         <DateNowScreen />
+        <Text>{item.date}</Text>
         <TouchableOpacity style={styles.imageStyle}>
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
@@ -22,6 +23,7 @@ export default function AccountScreen() {
   };
   return (
     <FlatList
+      showsVerticalScrollIndicator={false}
       ListHeaderComponent={<AccountScreenHeader />}
       data={images}
       renderItem={renderItem}
