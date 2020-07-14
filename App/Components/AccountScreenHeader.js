@@ -20,12 +20,9 @@ export default function AccountScreenHeader() {
         <SafeAreaView>
           <StatusBar barStyle={"dark-content"} translucent={true} />
         </SafeAreaView>
-
         <TouchableOpacity style={styles.userInfoStyle}>
           <Image
             source={images.avatar}
-            resizeMode={"cover"}
-            resizeMethod={"resize"}
             style={styles.avatarStyle}
           />
           <Text style={{ marginLeft: 16 }}>Hi There</Text>
