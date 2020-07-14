@@ -18,12 +18,12 @@ export default function DateNowScreen() {
       style={{
         flex: 1,
         justifyContent: "center",
-        marginLeft: 10
+        marginLeft: 16,
+        marginTop: 16
       }}>
       <Text
         style={{
-          fontSize: 20,
-          marginTop: 16
+          fontSize: 20
         }}>
         {date}
       </Text>
