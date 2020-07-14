@@ -2,11 +2,13 @@ import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   backgroundImage: {
+    flex: 1,
     alignItems: "center",
     width: "100%",
     height: (160 / 736) * Dimensions.get("screen").height
   },
   text: {
+    alignSelf:"center",
     fontSize: 30,
     color: "white",
     marginTop: (25 / 736) * Dimensions.get("screen").height
