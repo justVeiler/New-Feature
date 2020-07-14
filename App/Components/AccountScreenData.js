@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 function accountData() {
   const appContext = useContext(AppContext);
-  const uri = appContext.state;
+  const {uri} = appContext.state;
   console.log("URI", uri);
   return console.log("COME HERE")[
     {
