@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     padding: 5,
     marginBottom: 10
+  },
+  flatListStyle: { flex: 1, backgroundColor: "white" },
+  headerComponentStyle: {
+    marginBottom: (100 / 736) * Dimensions.get("screen").height
   }
 });
 export default styles;
