@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     padding: 10,
     left: 10,
-    top: 20,
+    top: 28,
   },
   arrow: {
     height: (18 / 736) * Dimensions.get("screen").height,
