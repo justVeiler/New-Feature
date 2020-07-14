@@ -11,9 +11,9 @@ export default function AccountScreen() {
 
   const renderItem = ({ item }) => {
     return (
-      <View style={{ flexDirection: "column" }}>
-        <Text style={{ marginLeft: 16, fontSize: 20 }}>Date</Text>
-        <TouchableOpacity style={{ padding: 5 }}>
+      <View>
+        <Text style={styles.date}>Date</Text>
+        <TouchableOpacity style={styles.imageStyle}>
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
       </View>
@@ -21,10 +21,9 @@ export default function AccountScreen() {
   };
   return (
     <FlatList
-      style={{ flex: 1 }}
       ListHeaderComponent={<AccountScreenHeader />}
       data={images}
-      renderItem={renderItem}>
-    </FlatList>
+      renderItem={renderItem}
+    />
   );
 }

@@ -7,7 +7,8 @@ import {
   SafeAreaView,
   StatusBar,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from "react-native";
 
 export default function AccountScreenHeader() {
@@ -20,7 +21,7 @@ export default function AccountScreenHeader() {
           <StatusBar barStyle={"dark-content"} translucent={true} />
         </SafeAreaView>
 
-        <View style={styles.userInfoStyle}>
+        <TouchableOpacity style={styles.userInfoStyle}>
           <Image
             source={images.avatar}
             resizeMode={"cover"}
@@ -28,7 +29,7 @@ export default function AccountScreenHeader() {
             style={styles.avatarStyle}
           />
           <Text style={{ marginLeft: 16 }}>Hi There</Text>
-        </View>
+        </TouchableOpacity>
       </ImageBackground>
     </View>
   );

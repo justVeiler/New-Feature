@@ -33,9 +33,10 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   buttonUpload: {
-    backgroundColor: "blue",
-    width: 100,
-    height: 100,
+    marginTop : 10,
+    backgroundColor: "gold",
+    width: 80,
+    height: 80,
     justifyContent: "center",
     alignItems: "center",
     marginLeft : 16
