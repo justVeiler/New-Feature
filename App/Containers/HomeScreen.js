@@ -44,22 +44,20 @@ export default function HomeScreen() {
   };
 
   return (
-    <View>
+    <SafeAreaView style={{ flex: 1, flexGrow: 1 , backgroundColor:"transparent"}}>
       <ImageBackground
         source={images.background}
         style={styles.backgroundImage}
       />
-      <SafeAreaView>
-        <FlatList
-          style={styles.flatListStyle}
-          data={newsData}
-          renderItem={renderItem}
-          showsVerticalScrollIndicator={false}
-          ListHeaderComponent={<HomeScreenHeader />}
-          ListHeaderComponentStyle={styles.headerComponentStyle}
-          automaticallyAdjustContentInsets={false}
-        />
-      </SafeAreaView>
-    </View>
+      <FlatList
+        style={styles.flatListStyle}
+        data={newsData}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={<HomeScreenHeader />}
+        ListHeaderComponentStyle={styles.headerComponentStyle}
+        automaticallyAdjustContentInsets={false}
+      />
+    </SafeAreaView>
   );
 }
