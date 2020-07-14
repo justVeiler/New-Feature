@@ -18,15 +18,12 @@ export default function AccountScreenHeader() {
         source={images.background}
         style={styles.backgroundImage}>
         <SafeAreaView>
-          <StatusBar barStyle={"dark-content"} translucent={true} />
+          <StatusBar barStyle={"light-content"} translucent={true} />
+          <TouchableOpacity style={styles.userInfoStyle}>
+            <Image source={images.avatar} style={styles.avatarStyle} />
+            <Text style={{ marginLeft: 16 }}>Hi There</Text>
+          </TouchableOpacity>
         </SafeAreaView>
-        <TouchableOpacity style={styles.userInfoStyle}>
-          <Image
-            source={images.avatar}
-            style={styles.avatarStyle}
-          />
-          <Text style={{ marginLeft: 16 }}>Hi There</Text>
-        </TouchableOpacity>
       </ImageBackground>
     </View>
   );
