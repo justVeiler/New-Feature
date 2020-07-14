@@ -17,10 +17,12 @@ function renderItem({ item }) {
 }
 
 export default function HomeScreenNews() {
+  console.log("HELLo");
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.headerStyle}>News</Text>
       <FlatList
+        scrollEnabled={false}
         data={newsData}
         renderItem={renderItem}
         style={{ marginTop: 5 }}

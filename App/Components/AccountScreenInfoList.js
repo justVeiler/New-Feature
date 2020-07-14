@@ -1,41 +1,35 @@
-import React from "react";
-import { View, Text, FlatList, TouchableOpacity, Image, ScrollView } from "react-native";
-import accountData from "../Components/AccountScreenData";
+import React, { useContext } from "react";
+import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import styles from "./Styles/AccountScreenInfoListStyle";
+import { AppContext } from "../Providers/AppProvider";
 
-export default function AccountScreenInfoList(props) {
+export default function AccountScreenInfoList() {
+  const appContext = useContext(AppContext);
+  const { images } = appContext.state;
+  console.log("DATA", images);
 
-  const {params} = props;
-  const {uri} = params;
-
-  function renderItems({item}) {
+  const renderItem = ({ item }) => {
+    console.log("ITEM:", item);
     return (
-      <TouchableOpacity style={{ backgroundColor: "blue"}}>
-        <Image source={item.data.uri} style={styles.imageStyle} />
+      <TouchableOpacity>
+        <Image source={{ uri: item }} style={styles.imageStyle} />
       </TouchableOpacity>
     );
-  }
+  };
 
+  // const keyExtractor = (item, index) => {
+  //   item.id.toString();
+  // };
 
   return (
     <View style={{ flex: 1 }}>
       <Text style={styles.headerStyle}>History</Text>
       <FlatList
-        data={accountData}
-        renderItem={renderItems}
-        style={{ marginTop: 5, width: 150, height: 200 }}
-        keyExtractor={(item, index) => index.toString()}
+        data={images}
+        renderItem={renderItem}
+        style={{ marginTop: 5 }}
+        // keyExtractor={keyExtractor}
       />
-      {/*<ScrollView>*/}
-      {/*  <View>*/}
-      {/*    {[*/}
-      {/*      {image1: uri},*/}
-      {/*    ].map((e, index) => (*/}
-      {/*      <View key={index.toString()}>*/}
-      {/*      </View>*/}
-      {/*    ))}*/}
-      {/*  </View>*/}
-      {/*</ScrollView>*/}
     </View>
   );
 }
