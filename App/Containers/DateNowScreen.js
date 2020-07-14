@@ -1,35 +1,32 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, { useEffect, useState } from "react";
 
-import { StyleSheet, View, Alert, Text } from 'react-native';
+import { View, Text } from "react-native";
 
-export default function DateNowScreen(){
+export default function DateNowScreen() {
+  const [date, setDate] = useState("");
 
-  const [date, setDate] = useState('');
-
-  useEffect(() =>{
+  useEffect(() => {
     const date = new Date().getDate();
     const month = new Date().getMonth();
     const year = new Date().getFullYear();
 
-    setDate([date + '/' + month + '/' + year]);
-  }, [])
+    setDate([date + "/" + month + "/" + year]);
+  }, []);
 
-    return (
-      <View
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        marginLeft: 16,
+        marginTop: 16
+      }}>
+      <Text
         style={{
-          flex: 1,
-          justifyContent: 'center',
-          marginLeft: 10
+          fontSize: 20
         }}>
-        <Text
-          style={{
-            fontSize: 20,
-            marginTop: 16,
-          }}>
-          {date}
-        </Text>
-      </View>
-    );
-
+        {date}
+      </Text>
+    </View>
+  );
 }
-

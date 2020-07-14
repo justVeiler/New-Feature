@@ -1,11 +1,9 @@
-import React, {useContext, useState} from 'react';
-import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import React, { useContext } from "react";
+import { FlatList, Image, Text, TouchableOpacity, View,  } from "react-native";
 import AccountScreenHeader from "../Components/AccountScreenHeader";
 import { AppContext } from "../Providers/AppProvider";
 import styles from "../Components/Styles/AccountScreenInfoListStyle";
-import DateNowScreen from './DateNowScreen';
-import {navigate} from '../Navigation/RootNavigation';
-
+import DateNowScreen from "./DateNowScreen";
 
 export default function AccountScreen() {
   const appContext = useContext(AppContext);
@@ -16,7 +14,8 @@ export default function AccountScreen() {
     return (
       <View>
         <DateNowScreen />
-          <TouchableOpacity style={styles.imageStyle} onPress={() => navigate('ShowImageScreen', {item: item})}>
+        <Text>{item.date}</Text>
+        <TouchableOpacity style={styles.imageStyle}>
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
       </View>

@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     width: "100%",
-    height: (170 / 736) * Dimensions.get("screen").height,
+    height: (170 / 736) * Dimensions.get("screen").height
   },
   avatarStyle: {
     width: 110,
