@@ -1,8 +1,8 @@
 import React from "react";
 import {
   ImageBackground,
-  StatusBar,
   SafeAreaView,
+  StatusBar,
   Text,
   View
 } from "react-native";
@@ -13,17 +13,17 @@ import HomeScreenSlide from "../Components/HomeScreenSlide";
 export default function HomeScreenHeader() {
   return (
     <ImageBackground source={images.background} style={styles.backgroundImage}>
+      <StatusBar
+        barStyle={"dark-content"}
+        translucent={true}
+        backgroundColor={"transparent"}
+      />
       <SafeAreaView>
-        <StatusBar
-          barStyle={"dark-content"}
-          translucent={true}
-          backgroundColor={"transparent"}
-        />
+        <Text style={styles.text}>Welcome</Text>
+        <View style={styles.slideStyle}>
+          <HomeScreenSlide />
+        </View>
       </SafeAreaView>
-      <Text style={styles.text}>Welcome</Text>
-      <View style={styles.slideStyle}>
-        <HomeScreenSlide />
-      </View>
     </ImageBackground>
   );
 }
