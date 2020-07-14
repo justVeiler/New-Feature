@@ -11,12 +11,12 @@ const styles = StyleSheet.create({
     height: (100 / 736) * Dimensions.get("screen").height,
     borderRadius: 60,
     marginLeft: 16,
-    marginTop : (10 / 736) * Dimensions.get("screen").height
+    marginTop: (10 / 736) * Dimensions.get("screen").height
   },
   userInfoStyle: {
-    zIndex:1,
+    zIndex: 1,
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "center"
   }
 });
 export default styles;
