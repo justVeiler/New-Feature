@@ -1,21 +1,22 @@
-import React, { useContext } from "react";
+import React, {useContext, useState} from 'react';
 import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import AccountScreenHeader from "../Components/AccountScreenHeader";
 import { AppContext } from "../Providers/AppProvider";
 import styles from "../Components/Styles/AccountScreenInfoListStyle";
 import DateNowScreen from './DateNowScreen';
 
+
 export default function AccountScreen() {
   const appContext = useContext(AppContext);
   const { images } = appContext.state;
   console.log("DATA", images);
 
+console.log('sss', state)
   const renderItem = ({ item }) => {
     return (
       <View>
         <DateNowScreen />
-        <Text>{item.date}</Text>
-        <TouchableOpacity style={styles.imageStyle}>
+          <TouchableOpacity style={styles.imageStyle} >
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
       </View>
