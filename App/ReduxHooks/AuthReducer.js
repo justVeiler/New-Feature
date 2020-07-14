@@ -1,14 +1,14 @@
-import {AuthAction} from './AuthActions';
+import { AuthAction } from "./AuthActions";
 
 export const initialState = {
- photos: []
-}
+  photos: []
+};
 
 export const AuthReducer = (state, action) => {
   if (action.type === AuthAction.saveImage) {
     const uri = action.payload;
-    return {...state, uri: uri}
+    return { ...state, uri: uri };
   } else {
     return state;
   }
-}
+};

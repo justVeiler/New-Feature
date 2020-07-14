@@ -2,14 +2,14 @@ import React from "react";
 import { View, Image, TouchableOpacity, Text } from "react-native";
 import images from "../Images/images";
 import { navigate } from "../Navigation/RootNavigation";
-import styles from "./Styles/GobackButtonStyle";
+import styles from "./Styles/DetailScreenGobackButtonStyle";
 
-export default function GobackButton() {
+export default function DetailScreenGobackButton() {
   return (
     <View>
       <TouchableOpacity
         style={styles.container}
-        onPress={() => navigate("AccountScreen")}>
+        onPress={() => navigate("HomeScreen")}>
         <Image source={images.back} style={styles.arrow} />
         <Text style={styles.text}>Back</Text>
       </TouchableOpacity>
