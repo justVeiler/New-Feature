@@ -1,14 +1,29 @@
-import React from "react";
-import { ScrollView } from "react-native";
-import AccountScreenInfoList from "../Components/AccountScreenInfoList";
+import React, { useContext } from "react";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import AccountScreenHeader from "../Components/AccountScreenHeader";
+import { AppContext } from "../Providers/AppProvider";
+import styles from "../Components/Styles/AccountScreenInfoListStyle";
 
 export default function AccountScreen() {
-  console.log("ACCOUNT SCREEN");
+  const appContext = useContext(AppContext);
+  const { images } = appContext.state;
+  console.log("DATA", images);
+
+  const renderItem = ({ item }) => {
+    return (
+      <View>
+        <Text style={styles.date}>Date</Text>
+        <TouchableOpacity style={styles.imageStyle}>
+          <Image source={{ uri: item }} style={styles.imageStyle} />
+        </TouchableOpacity>
+      </View>
+    );
+  };
   return (
-    <ScrollView style={{ flex: 1 }}>
-      <AccountScreenHeader />
-      <AccountScreenInfoList />
-    </ScrollView>
+    <FlatList
+      ListHeaderComponent={<AccountScreenHeader />}
+      data={images}
+      renderItem={renderItem}
+    />
   );
 }

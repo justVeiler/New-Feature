@@ -1,5 +1,4 @@
 import { AppActions } from "./AppActions";
-import {LocalStorage} from '../Lib/LocalStorage';
 
 export const initialState = {
   images: []
