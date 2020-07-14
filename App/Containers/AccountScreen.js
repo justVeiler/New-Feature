@@ -3,6 +3,7 @@ import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import AccountScreenHeader from "../Components/AccountScreenHeader";
 import { AppContext } from "../Providers/AppProvider";
 import styles from "../Components/Styles/AccountScreenInfoListStyle";
+import DateNowScreen from './DateNowScreen';
 
 export default function AccountScreen() {
   const appContext = useContext(AppContext);
@@ -12,7 +13,7 @@ export default function AccountScreen() {
   const renderItem = ({ item }) => {
     return (
       <View>
-        <Text style={styles.date}>Date</Text>
+        <DateNowScreen />
         <TouchableOpacity style={styles.imageStyle}>
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
