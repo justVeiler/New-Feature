@@ -16,16 +16,16 @@ import { navigate } from "../Navigation/RootNavigation";
 export default function AccountScreen() {
   const appContext = useContext(AppContext);
   const { images } = appContext.state;
-  console.log("DATA", images);
+  // console.log("DATA", images);
 
   const renderItem = ({ item }) => {
+    const getOnPress = async () =>
+      await navigate("ShowImageScreen", { item: item });
     return (
       <View>
         <DateNowScreen />
         <Text>{item.date}</Text>
-        <TouchableOpacity
-          style={styles.imageStyle}
-          onPress={() => navigate("ShowImageScreen", { item: item })}>
+        <TouchableOpacity style={styles.imageStyle} onPress={getOnPress}>
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
       </View>
