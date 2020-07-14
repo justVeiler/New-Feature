@@ -52,7 +52,6 @@ export default class ImagePicking extends Component {
       <View style={styles.container}>
         <Animated.View style={[styles.button]}>
           <TouchableOpacity
-            underlayColor={"#7f58ff"}
             onPress={this.handlePress.bind(this)}>
             <Image source={images.plus} />
           </TouchableOpacity>
