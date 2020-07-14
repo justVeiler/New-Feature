@@ -14,11 +14,10 @@ import {
 
 export default function AccountScreenHeader() {
   return (
-    <View>
       <ImageBackground
         source={images.background}
         style={styles.backgroundImage}>
-        <SafeAreaView>
+        <SafeAreaView style={{flex: 1 , justifyContent:'center'}}>
           <StatusBar barStyle={"light-content"} translucent={true} />
           <TouchableOpacity style={styles.userInfoStyle} onPress={() => navigate('DateNowScreen')}>
             <Image source={images.avatar} style={styles.avatarStyle} />
@@ -26,6 +25,5 @@ export default function AccountScreenHeader() {
           </TouchableOpacity>
         </SafeAreaView>
       </ImageBackground>
-    </View>
   );
 }
