@@ -3,6 +3,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import styles from "../Components/Styles/ImagePickingScreenStyle";
 import GobackButton from "../Components/GobackButton";
 import { AppContext } from "../Providers/AppProvider";
+import {navigate} from '../Navigation/RootNavigation';
 
 export default function ImagePickingScreen(props) {
   const { route } = props;
@@ -16,6 +17,7 @@ export default function ImagePickingScreen(props) {
     try {
       (async function() {
         await saveImage(uri);
+        navigate("AccountScreen")
       })();
     } catch (e) {}
   };
