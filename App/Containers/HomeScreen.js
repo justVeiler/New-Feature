@@ -1,5 +1,5 @@
 import React, {useEffect, useContext} from 'react';
-import {ScrollView, View} from 'react-native';
+import {ScrollView} from 'react-native';
 import HomeScreenHeader from '../Components/HomeScreenHeader';
 import HomeScreenSlide from '../Components/HomeScreenSlide';
 import HomeScreenNews from '../Components/HomeScreenNews';
