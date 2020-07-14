@@ -12,7 +12,11 @@ const styles = StyleSheet.create({
     marginTop: (5 / 736) * Dimensions.get("screen").height,
     paddingBottom: 5
   },
-  imageStyle: { width: 110, height: 110, marginLeft: 18, marginRight: 18 },
+  imageStyle: {
+    width: 120,
+    height: 120,
+    marginLeft: 8,
+  },
   headerText: {
     lineHeight: 26,
     fontSize: 22,

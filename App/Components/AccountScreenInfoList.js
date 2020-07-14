@@ -9,17 +9,16 @@ export default function AccountScreenInfoList() {
   console.log("DATA", images);
 
   const renderItem = ({ item }) => {
-    console.log("ITEM:", item);
+    // console.log("ITEM:", item);
     return (
-      <TouchableOpacity>
-        <Image source={{ uri: item }} style={styles.imageStyle} />
-      </TouchableOpacity>
+      <View style={{flexDirection: "column"}}>
+          <Text style={{marginLeft: 16, fontSize : 20}}>Date</Text>
+        <TouchableOpacity style={{ padding: 5}}>
+          <Image source={{ uri: item }} style={styles.imageStyle} />
+        </TouchableOpacity>
+      </View>
     );
   };
-
-  // const keyExtractor = (item, index) => {
-  //   item.id.toString();
-  // };
 
   return (
     <View style={{ flex: 1 }}>
@@ -28,7 +27,6 @@ export default function AccountScreenInfoList() {
         data={images}
         renderItem={renderItem}
         style={{ marginTop: 5 }}
-        // keyExtractor={keyExtractor}
       />
     </View>
   );
