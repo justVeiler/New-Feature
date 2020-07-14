@@ -1,3 +1,3 @@
-export const AuthAction ={
-  saveImage: 'SAVE_IMAGE',
-}
+export const AuthAction = {
+  saveImage: "SAVE_IMAGE"
+};

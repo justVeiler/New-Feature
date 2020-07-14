@@ -1,5 +1,5 @@
 import { AppContext } from "../Providers/AppProvider";
-import {useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from "react";
 
 function accountData() {
   const appContext = useContext(AppContext);
@@ -8,7 +8,7 @@ function accountData() {
   const array = [
     {
       key: "key1",
-      uri: data.data,
+      uri: data.data
     }
   ];
   console.log("ARRAY", array);
