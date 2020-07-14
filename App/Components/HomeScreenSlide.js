@@ -10,7 +10,7 @@ export default function HomeScreenSlide() {
       backgroundColor:"white", marginTop : 80/736 * Dimensions.get("screen").height}}>
       <Swiper
         loop={true}
-        timeout={30}
+        timeout={5}
         innerContainerStyle={styles.swipeContainer}
         containerStyle={styles.container}>
         <View style={styles.slide}>
