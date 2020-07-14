@@ -8,6 +8,7 @@ import HomeScreen from "../Containers/HomeScreen";
 import ImagePickingScreen from "../Containers/ImagePickingScreen";
 import DetailScreen from "../Containers/DetailScreen";
 import DateNowScreen from '../Containers/DateNowScreen';
+import ShowImageScreen from '../Containers/ShowImageScreen';
 const Stack = createStackNavigator();
 
 function AppNavigation() {
@@ -18,6 +19,7 @@ function AppNavigation() {
         <Stack.Screen name={"ImagePickingScreen"} component={ImagePickingScreen}/>
         <Stack.Screen name={"DetailScreen"} component={DetailScreen} />
         <Stack.Screen name={"DateNowScreen"} component={DateNowScreen} />
+        <Stack.Screen name={"ShowImageScreen"} component={ShowImageScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

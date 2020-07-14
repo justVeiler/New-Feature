@@ -4,6 +4,7 @@ import AccountScreenHeader from "../Components/AccountScreenHeader";
 import { AppContext } from "../Providers/AppProvider";
 import styles from "../Components/Styles/AccountScreenInfoListStyle";
 import DateNowScreen from './DateNowScreen';
+import {navigate} from '../Navigation/RootNavigation';
 
 
 export default function AccountScreen() {
@@ -11,12 +12,11 @@ export default function AccountScreen() {
   const { images } = appContext.state;
   console.log("DATA", images);
 
-console.log('sss', state)
   const renderItem = ({ item }) => {
     return (
       <View>
         <DateNowScreen />
-          <TouchableOpacity style={styles.imageStyle} >
+          <TouchableOpacity style={styles.imageStyle} onPress={() => navigate('ShowImageScreen', {item: item})}>
           <Image source={{ uri: item }} style={styles.imageStyle} />
         </TouchableOpacity>
       </View>
