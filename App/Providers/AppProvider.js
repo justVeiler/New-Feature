@@ -22,7 +22,7 @@ const saveImage = (state, dispatch) => async data => {
     await LocalStorage.get("savedImages", "[]")
   );
 
-  console.log("IN STORAGE", savedImagesInLocalStorage);
+  // console.log("IN STORAGE", savedImagesInLocalStorage);
   savedImagesInLocalStorage.unshift(data);
   await LocalStorage.set(
     "savedImages",
@@ -33,7 +33,7 @@ const saveImage = (state, dispatch) => async data => {
 
 const loadSavedImages = (state, dispatch) => async () => {
   const savedImages = JSON.parse(await LocalStorage.get("savedImages", "[]"));
-  console.log("SAVED IMAGES", savedImages);
+  // console.log("SAVED IMAGES", savedImages);
   await dispatch({ type: AppActions.loadSavedImages, payload: savedImages });
 };
 

@@ -1,5 +1,5 @@
 import { Dimensions, StyleSheet } from "react-native";
-import colors from '../../Themes/Colors';
+import colors from "../../Themes/Colors";
 
 const styles = StyleSheet.create({
   container: {
@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   container1: {
-    alignItems: 'center',
+    alignItems: "center"
   },
   btnUpload: {
     padding: 10,
     top: 10,
     borderRadius: 10,
-    backgroundColor: colors.dodgerBlue,
+    backgroundColor: colors.dodgerBlue
   },
   textUpload: {
     color: colors.paleGrey,
@@ -33,12 +33,13 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   buttonUpload: {
-    backgroundColor: "blue",
-    width: 100,
-    height: 100,
+    marginTop: 10,
+    backgroundColor: "gold",
+    width: 80,
+    height: 80,
     justifyContent: "center",
     alignItems: "center",
-    marginLeft : 16
+    marginLeft: 16
   }
 });
 
