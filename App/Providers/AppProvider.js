@@ -2,6 +2,7 @@ import initialState, { AppReducers } from "../ReduxHooks/AppReducers";
 import React, { createContext, useReducer } from "react";
 import { AppActions } from "../ReduxHooks/AppActions";
 import { LocalStorage } from "../Lib/LocalStorage";
+import API from "../Lib/API/API";
 
 export const AppContext = createContext({});
 export const AppProvider = AppContext.Provider;
@@ -17,18 +18,22 @@ export default function Wrapper(props) {
   );
 }
 
-const saveImage = (state, dispatch) => async data => {
-  const savedImagesInLocalStorage = JSON.parse(
-    await LocalStorage.get("savedImages", "[]")
-  );
-
-  // console.log("IN STORAGE", savedImagesInLocalStorage);
-  savedImagesInLocalStorage.unshift(data);
-  await LocalStorage.set(
-    "savedImages",
-    JSON.stringify(savedImagesInLocalStorage)
-  );
-  await dispatch({ type: AppActions.saveImage, payload: data });
+const uploadImages = (state, dispatch) => async (
+  image,
+  onSuccess,
+  onFailed
+) => {
+  const response = await API.uploadImage(image);
+  if (response.status === true) {
+    console.log("SUCCESS");
+    onSuccess(response);
+  } else {
+    onFailed(response);
+  }
+  await dispatch({
+    type: AppActions.uploadImage,
+    payload: image
+  });
 };
 
 const loadSavedImages = (state, dispatch) => async () => {
@@ -39,7 +44,7 @@ const loadSavedImages = (state, dispatch) => async () => {
 
 const mapActionsToDispatch = (state, dispatch) => {
   return {
-    saveImage: saveImage(state, dispatch),
+    uploadImages: uploadImages(state, dispatch),
     loadSavedImages: loadSavedImages(state, dispatch)
   };
 };

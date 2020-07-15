@@ -1,4 +1,4 @@
 export const AppActions = {
-  saveImage: "CHECK_UPLOAD_HISTORY",
+  uploadImage: "UPLOAD_IMAGE",
   loadSavedImages: "LOAD_SAVED_IMAGES"
 };

@@ -10,7 +10,7 @@ export default class ImagePicking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageSource: {}
+      imageSource: {},
     };
   }
 
@@ -27,10 +27,8 @@ export default class ImagePicking extends Component {
     };
     ImagePicker.showImagePicker(options, response => {
       // console.log("Response = ", response);
-      const { uri } = response;
       navigate("ImagePickingScreen", {
-        uri: uri,
-        response: response
+        image: response
       });
       if (response.didCancel) {
         console.log("User cancelled image picker");
@@ -42,7 +40,7 @@ export default class ImagePicking extends Component {
         alert(response.customButton);
       } else {
         this.setState({
-          imageSource: { uri: response.uri }
+          imageSource: { uri: response.uri },
         });
       }
     });
@@ -51,8 +49,7 @@ export default class ImagePicking extends Component {
     return (
       <View style={styles.container}>
         <Animated.View style={[styles.button]}>
-          <TouchableOpacity
-            onPress={this.handlePress.bind(this)}>
+          <TouchableOpacity onPress={this.handlePress.bind(this)}>
             <Image source={images.plus} />
           </TouchableOpacity>
         </Animated.View>
