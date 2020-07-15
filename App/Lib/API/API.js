@@ -176,7 +176,7 @@ const DELETE = (url, config = {}) => {
 const API = {
   uploadImage: image => {
     const formData = new FormData();
-    formData.append("avatar", {
+    formData.append("image", {
       uri: image.uri,
       type: image.type,
       name: image.fileName
