@@ -44,11 +44,7 @@ export default function HomeScreen() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, flexGrow: 1 , backgroundColor:"transparent"}}>
-      <ImageBackground
-        source={images.background}
-        style={styles.backgroundImage}
-      />
+    <SafeAreaView style={{ flex: 1, flexGrow: 1 }}>
       <FlatList
         style={styles.flatListStyle}
         data={newsData}
