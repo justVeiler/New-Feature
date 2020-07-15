@@ -181,7 +181,7 @@ const API = {
       type: image.type,
       name: image.fileName
     });
-    const path = "api/image";
+    const path = "api";
     return POST(path, formData);
   }
 };
