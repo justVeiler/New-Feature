@@ -3,7 +3,6 @@ import * as qs from "query-string";
 
 import {
   API_ENDPOINT,
-  API_OLD_ENDPOINT,
   APP_ID,
   APP_SECRET,
   APP_VERSION_CODE,
@@ -13,10 +12,7 @@ import {
   STATUS_BAD_REQUEST,
   STATUS_INTERNAL_SERVER_ERROR,
   STATUS_OK,
-  STATUS_UNAUTHORIZED,
-  API_ENDPOINT_V2,
-  API_ENDPOINT_V4,
-  API_ENDPOINT_V5
+  STATUS_UNAUTHORIZED
 } from "../../Config/Remote";
 import TimeHelper from "../../Common/TimeHelper";
 
@@ -181,7 +177,8 @@ const API = {
       type: image.type,
       name: image.fileName
     });
-    const path = "api";
+    const path = "image";
     return POST(path, formData);
   }
 };
+export default API;

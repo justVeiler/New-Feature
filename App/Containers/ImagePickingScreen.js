@@ -10,12 +10,13 @@ export default function ImagePickingScreen(props) {
   const { params } = route;
   const { uri } = params;
   const appContext = useContext(AppContext);
-  const { saveImage } = appContext;
+  const { uploadImages } = appContext;
+  console.log("CONTEXT", appContext);
   const onPress = () => {
     try {
       (async function() {
-        await saveImage(uri);
-        navigate("AccountScreen");
+        await uploadImages(uri);
+        // navigate("AccountScreen");
       })();
     } catch (e) {}
   };
