@@ -5,10 +5,10 @@ export const initialState = {
 };
 
 export const AppReducers = (state, action) => {
-  if (action.type === AppActions.saveImage) {
-    const uri = action.payload;
+  if (action.type === AppActions.uploadImage) {
+    const images = action.payload;
     const newImages = [...state.images];
-    newImages.unshift(uri);
+    newImages.unshift(images);
     return { ...state, images: newImages };
   } else if (action.type === AppActions.loadSavedImages) {
     return { ...state, images: action.payload };

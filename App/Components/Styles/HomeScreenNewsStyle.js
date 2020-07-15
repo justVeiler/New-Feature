@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   container: {
     marginLeft: 16,
     marginRight: 16,
-    marginTop: (4 / 736) * Dimensions.get("screen").height,
+    marginTop: (4 / 736) * Dimensions.get("screen").height
   },
   itemStyle: {
     marginLeft: 18,
@@ -35,9 +35,24 @@ const styles = StyleSheet.create({
     padding: 5,
     marginBottom: 10
   },
-  flatListStyle: { flex: 1, backgroundColor: "white" },
+  flatListStyle: {  backgroundColor: "white" },
   headerComponentStyle: {
-    marginBottom: (100 / 736) * Dimensions.get("screen").height
+    marginBottom: (70 / 736) * Dimensions.get("screen").height
+  },
+  backgroundImage: {
+    flex: 1,
+    alignItems: "center",
+    width: "100%",
+    height: (160 / 736) * Dimensions.get("screen").height
+  },
+  text: {
+    alignSelf:"center",
+    fontSize: 30,
+    color: "white",
+    marginTop: (25 / 736) * Dimensions.get("screen").height
+  },
+  slideStyle: {
+    width: ((414 - 16) / 414) * Dimensions.get("screen").width
   }
 });
 export default styles;
