@@ -21,11 +21,7 @@ const traces = {};
 const instance = axios.create({
   baseURL: API_ENDPOINT,
   timeout: REQUEST_TIME_OUT,
-  headers: {
-    "App-Id": APP_ID,
-    "App-Secret": APP_SECRET,
-    "App-Version": APP_VERSION_CODE
-  }
+  headers: {}
 });
 
 const handleSuccess = response => {
@@ -57,10 +53,6 @@ const handleError = error => {
       "DD/MM/YYYY HH:mm:ss"
     )
   );
-
-  const lang = instance.defaults.headers.common["Lang"]
-    ? instance.defaults.headers.common["Lang"]
-    : "vi";
   const message = "";
 
   if (error.response) {
@@ -172,10 +164,13 @@ const DELETE = (url, config = {}) => {
 const API = {
   uploadImage: image => {
     const formData = new FormData();
+    const { uri, type, name } = image;
+    const extension = type ? type.split("/")[1] : "jpg";
+    const fileName = name ? name : "file." + extension;
     formData.append("image", {
-      uri: image.uri,
-      type: image.type,
-      name: image.fileName
+      uri: uri,
+      type: type,
+      name: fileName
     });
     const path = "image";
     return POST(path, formData);

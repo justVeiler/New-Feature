@@ -8,14 +8,14 @@ import { navigate } from "../Navigation/RootNavigation";
 export default function ImagePickingScreen(props) {
   const { route } = props;
   const { params } = route;
-  const { uri } = params;
+  const { image } = params;
+  console.log("PARAM", params);
   const appContext = useContext(AppContext);
   const { uploadImages } = appContext;
-  console.log("CONTEXT", appContext);
   const onPress = () => {
     try {
       (async function() {
-        await uploadImages(uri);
+        await uploadImages(image);
         // navigate("AccountScreen");
       })();
     } catch (e) {}
@@ -25,7 +25,7 @@ export default function ImagePickingScreen(props) {
     <View style={styles.container}>
       <ImagePickingScreenGobackButton />
       <View style={styles.container}>
-        <Image source={{ uri: params.uri }} style={styles.image} />
+        <Image source={{ uri: image.uri }} style={styles.image} />
         <TouchableOpacity style={styles.buttonUpload} onPress={onPress}>
           <Text>UPLOAD</Text>
         </TouchableOpacity>
