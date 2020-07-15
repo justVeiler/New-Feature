@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   flatListStyle: {  backgroundColor: "white" },
   headerComponentStyle: {
-    marginBottom: (100 / 736) * Dimensions.get("screen").height
+    marginBottom: (70 / 736) * Dimensions.get("screen").height
   },
   backgroundImage: {
     flex: 1,
